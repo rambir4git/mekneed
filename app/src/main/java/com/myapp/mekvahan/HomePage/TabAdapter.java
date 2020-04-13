@@ -51,7 +51,6 @@ public class TabAdapter extends RecyclerView.Adapter<TabAdapter.TabViewHolder> {
             public void onClick(View v) {
                 mMenuMyVehicleLayout.setVisibility(View.GONE);
 
-                int tabType = tab.getTabType();
                 int tabId   = tab.getId();
 
                 Intent i;

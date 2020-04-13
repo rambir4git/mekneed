@@ -18,12 +18,6 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details);
 
-       /* Spinner detailSpinner=findViewById(R.id.detail_spinner);
-        ArrayAdapter<CharSequence> spinnerAdapter=ArrayAdapter.createFromResource(this,
-                R.array.material_calendar_months_array, R.layout.spinner_layout_custom4);
-        spinnerAdapter.setDropDownViewResource(R.layout.spinner_detail_dropdown_view);
-        detailSpinner.setAdapter(spinnerAdapter);*/
-
         TextView details = findViewById(R.id.detail_dropdown);
         LinearLayout layout = findViewById(R.id.linear);
         for (int i = 0; i < 10; i++) {

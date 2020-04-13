@@ -84,24 +84,6 @@ public class DialogDetails extends DialogFragment {
             public void onClick(View v) {
 
                 Toast.makeText(getActivity(), "yet to implement", Toast.LENGTH_SHORT).show();
-                /*String amount = ((TextView) mRootView.findViewById(R.id.value_total)).getText().toString();
-
-                amount = (int) Double.parseDouble(amount) + "";
-
-                Log.e("amount", amount + "");
-
-
-                Intent i = new Intent(getActivity(), PaymentOptions.class).putExtra("from bookings", 1);
-
-                Bundle bundle = new Bundle();
-                bundle.putString(PAYMENT_TYPE, getArguments().getString("type"));
-                bundle.putString(AMOUNT_TO_PAY, amount);
-                bundle.putString("id", getArguments().getString("id"));
-
-
-                i.putExtra(BUNDLE, bundle);
-
-                startActivity(i);*/
             }
         });
 

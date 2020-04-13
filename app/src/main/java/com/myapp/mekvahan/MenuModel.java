@@ -27,31 +27,11 @@ public class MenuModel {
         return menuName;
     }
 
-    public void setMenuName(String menuName) {
-        this.menuName = menuName;
-    }
-
     public boolean isHasChildren() {
         return hasChildren;
     }
 
-    public void setHasChildren(boolean hasChildren) {
-        this.hasChildren = hasChildren;
-    }
-
-    public boolean isGroup() {
-        return isGroup;
-    }
-
-    public void setGroup(boolean group) {
-        isGroup = group;
-    }
-
     public int getIcon_id() {
         return icon_id;
-    }
-
-    public void setIcon_id(int icon_id) {
-        this.icon_id = icon_id;
     }
 }

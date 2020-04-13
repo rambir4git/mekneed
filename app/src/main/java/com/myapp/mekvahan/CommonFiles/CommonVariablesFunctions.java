@@ -26,25 +26,9 @@ public class CommonVariablesFunctions {
     public static final int NO_OF_RETRY = 2;
 
     public static final String BASE = "https://mekvahan.com/api/";
-    public static final String BASE_USER = BASE + "user/";
-
-
-    public static final String KEY_CAR  = "Car";
-    public static final String KEY_BIKE = "Bike";
-
-    public static final String LOCATION_NOT_FOUND = "location_not_found";
 
     public static final String CUSTOMER_CARE    = "7838878899";
     public static final String CONTACT_MEKVAHAN = "+918920286986";
-
-    public static final String OTP_KEY = "192785A1sPOm0965a584ea5";
-
-    public static final String TODAY        = "Today";
-    public static final String TOMMARROW    = "Tommarrow";
-
-    public static final String BASE_URL_FROM_MEKPARK = "https://mekpark.com/mani14/user/";
-
-    public static final int GPS_REQUEST = 100;
     public static final String TIME_FORMAT  = "hh:mm a";
 
     @SuppressLint("ResourceAsColor")

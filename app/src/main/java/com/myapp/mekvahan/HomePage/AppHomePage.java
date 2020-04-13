@@ -12,6 +12,7 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -25,10 +26,17 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
 import com.google.android.material.navigation.NavigationView;
 import com.myapp.mekvahan.AllBookingsDashboard.BookingsHomePage;
 import com.myapp.mekvahan.Cart.CartHomePage;
 import com.myapp.mekvahan.Cart.CartTable;
+import com.myapp.mekvahan.CommonFiles.AppConstants;
+import com.myapp.mekvahan.CommonFiles.MySingleton;
 import com.myapp.mekvahan.Interfaces.MyListener;
 import com.myapp.mekvahan.MenuModel;
 import com.myapp.mekvahan.R;
@@ -39,6 +47,9 @@ import com.myapp.mekvahan.SignupAndLogin.Login.LoginHomePage;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import static com.myapp.mekvahan.CommonFiles.CommonVariablesFunctions.NO_OF_RETRY;
+import static com.myapp.mekvahan.CommonFiles.CommonVariablesFunctions.RETRY_SECONDS;
 
 public class AppHomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, MyListener {
 
@@ -67,10 +78,29 @@ public class AppHomePage extends AppCompatActivity implements NavigationView.OnN
 
         mMenuMyVehicleLayout = findViewById(R.id.menu_my_vehicle_layout);
 
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://mekvahan.com/api/mekvahan_auth_token", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(AppConstants.TOKEN.equals("Bearer ")){
+                    response=response.replace("\"","");
+                    AppConstants.TOKEN+=response;
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(AppHomePage.this, "Token api problem", Toast.LENGTH_SHORT).show();
+            }
+        });
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy((RETRY_SECONDS),
+                NO_OF_RETRY, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        MySingleton.getInstance(AppHomePage.this).addToRequestQueue(stringRequest);
+
         setNavigationDrawer();
         clickListener();
 
     }
+
 
     private void clickListener() {
 
@@ -166,7 +196,7 @@ public class AppHomePage extends AppCompatActivity implements NavigationView.OnN
             }
         });
         tv_name.setText("Helpline");
-        tv_mobile.setText("1075");
+        tv_mobile.setText("7838878899");
 
     }
 

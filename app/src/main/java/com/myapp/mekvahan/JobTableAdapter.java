@@ -24,6 +24,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.myapp.mekvahan.CommonFiles.AppConstants;
 import com.myapp.mekvahan.CommonFiles.MySingleton;
 
 import org.json.JSONException;
@@ -298,8 +299,7 @@ public class JobTableAdapter extends RecyclerView.Adapter<JobTableAdapter.JobHol
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> header = new HashMap<>();
                 header.put("Accept", "application/json");
-                header.put("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImIxMDhmOWM4OGJlZWRlZGRkZWRlYWZhMWNjYTRjYjYzMTEzNjQyNjE4ZTY1NGFlMjZkOGEyN2U3Yzc2MGY0YzJlZmIwNjk1Yzg2MjVjZTAzIn0.eyJhdWQiOiIxIiwianRpIjoiYjEwOGY5Yzg4YmVlZGVkZGRlZGVhZmExY2NhNGNiNjMxMTM2NDI2MThlNjU0YWUyNmQ4YTI3ZTdjNzYwZjRjMmVmYjA2OTVjODYyNWNlMDMiLCJpYXQiOjE1ODQ2MzM4MTEsIm5iZiI6MTU4NDYzMzgxMSwiZXhwIjoxNjE2MTY5ODExLCJzdWIiOiIzMDQiLCJzY29wZXMiOltdfQ.JR2S-9jhpi6EIdCzwWUIxhJLNixqnYi2nXcZRUj0FuLiHqihP1sT9N3pwIwbhrKCxoyPOr5orEbtTx7l9lRX-QzMv90oKW37GfzG1ql1giQs4B4Gh6oIEeO1Trg36fhQQltCHJa-vjCC35IcQNz_VBF_BjCQcc9vG_wHy_N8FLAseIZ2XGUXbvEeKnfE6o6waVsiSh404SbhMRolIQD3DHKfU5kV6Pz2YisHZ5299E29zf6oTLtmWnfSyuRuXhwvTFc2VOKnef991xxTZrqaUFd4A4f-D7lqKQX-R6sqXysQJtlGqOQYgc9CGIl394zGC1Q8Wc4hrti7q1ZFRwJRvchAnJ4hs_bA_-PCRxkKXwRt5MDdzlI9g9WGBJ-TnIMA46L02Kg6u7xDMYGz1GklntQcjbzApQPrRsVdoXN9e8qpGL9WGK5zgQEApffefszbkfQyfKkRkTnGD5FiUdCyRjgykF_l_rV_XOH1BdXyN6r2EetNgY7yOPOCHSe5x-qQYBe8pgycvU1JOmG5C52BSPMYgk-7E54MD1IrHc0t6_jxAYDzr_MCtSJJ045OhKx2N_qMfwutwYRKokgGvfoXtmAbKlKWDcjxe0Qg6YyaeJGQJF0RZ1eebt-K1jL0pjRTglFogXKgp94JPNWnccMK3W3I4OzoBW55VGGcc1P21AM");
-
+                header.put("Authorization", AppConstants.TOKEN);
                 return header;
             }
         };

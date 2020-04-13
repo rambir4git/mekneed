@@ -5,7 +5,6 @@ public class Tab {
     private String title;
     private int icons;
 
-    //1-car, 2-bike
 
     private int tabType;
 
@@ -26,9 +25,5 @@ public class Tab {
 
     public int getIcons() {
         return icons;
-    }
-
-    public int getTabType() {
-        return tabType;
     }
 }

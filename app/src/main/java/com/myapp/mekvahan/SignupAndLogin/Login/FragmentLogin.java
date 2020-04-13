@@ -13,7 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.myapp.mekvahan.CommonFiles.AllDialog;
 import com.myapp.mekvahan.HomePage.AppHomePage;
 import com.myapp.mekvahan.R;
 
@@ -53,14 +52,6 @@ public class FragmentLogin extends Fragment {
 
                 startActivity(new Intent(getActivity(), AppHomePage.class));
 
-            }
-        });
-
-        tv_faq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AllDialog dialog = new AllDialog(getActivity());
-                dialog.AllStaticPages(AllDialog.LOGIN_FAQ);
             }
         });
         tv_sendFeedback.setOnClickListener(new View.OnClickListener() {
