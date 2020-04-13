@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupAndLogin.SplashScreen">
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@drawable/splash_screen_bg"-->
+<!--        android:contentDescription="@string/splash"-->
+<!--        android:layout_marginStart="-30dp"-->
+<!--        android:layout_marginEnd="-30dp"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:layout_marginBottom="-5dp"/>-->
+
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/app_icon_red"-->
+<!--        android:contentDescription="@string/splash"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="@dimen/size60dp"-->
+<!--        android:scaleType="fitCenter"/>-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/splashmek_splash" />
+
+    <ImageView
+        android:id="@+id/splash_icon"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="120dp"
+        android:src="@mipmap/covid"
+        android:contentDescription="app logo" />
+
+
+
+
+
+
+
+
+</RelativeLayout>

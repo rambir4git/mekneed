@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage.FragMainContent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_vehicle"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/car_image" />
+
+        <ProgressBar
+            android:elevation="@dimen/text_size16dp"
+            android:id="@+id/progress_bar_image"
+            android:layout_width="wrap_content"
+            android:layout_height="128dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_vehicle"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:padding="3dp"
+            android:text="brand"
+            android:textColor="#a2a2a2"
+            android:textSize="@dimen/text_size16sp" />
+
+        <TextView
+            android:id="@+id/model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/brand"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat_semibold"
+            android:padding="3dp"
+            android:text="model"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size18sp" />
+
+        <TextView
+            android:id="@+id/plate_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/model"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="3dp"
+            android:text="plate"
+            android:textColor="#606060"
+            android:textSize="@dimen/text_size14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/plate_no"
+            android:layout_margin="8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+</FrameLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".HomePage.AppHomePage"
+    tools:showIn="@layout/app_home_page_app_bar">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/main_frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <!--Bottom Navigation-->
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <!--My vehicles - menu-->
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:id="@+id/menu_my_vehicle_layout"
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:elevation="16dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/to_my_vehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Vehicles"
+                android:textColor="@color/black"
+                android:paddingTop="14dp"
+                android:drawablePadding="96dp"
+                android:paddingBottom="14dp"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:fontFamily="@font/gotham_book_regular"
+                android:textSize="14sp"
+                android:drawableRight="@drawable/edit"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/sheet_light_background"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="4dp"
+                android:id="@+id/recycler_view_menu_my_vehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

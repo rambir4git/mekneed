@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_1" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="56dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_standard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_standard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="4dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/service_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@id/line"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="@string/standard_service"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+
+                    <View
+                        android:id="@+id/line_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:layout_below="@+id/line"
+                        android:layout_marginLeft="10pt"
+                        android:layout_marginRight="10pt"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/chart_light_grey" />
+
+                    <TextView
+                        android:id="@+id/txtview_selected_vehicle_brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line_horizontal"
+                        android:layout_marginLeft="10pt"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@id/line"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/maruti_suzuki"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/txtview_selected_vehicle_model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtview_selected_vehicle_brand"
+                        android:layout_marginLeft="10pt"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/line"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="@string/wagan_r"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14.5sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtview_selected_vehicle_platenum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtview_selected_vehicle_model"
+                        android:layout_marginLeft="10pt"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@id/line"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="DL1ROABC"
+                        android:textSize="11.5sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgview_selected_vehicle"
+                        android:layout_width="180dp"
+                        android:layout_height="120dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/line_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:elevation="-16dp"
+                        android:src="@drawable/car_image" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Service Descriptions Panel -->
+            <include
+                android:id="@+id/rl2"
+                layout="@layout/service_itemlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cv_standard" />
+
+            <!-- Book Now Button Panel -->
+            <include
+                android:id="@+id/rl3"
+                layout="@layout/service_itemlayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_size16dp"
+                android:layout_below="@+id/rl2" />
+
+            <!-- What all covered Panel -->
+            <include
+                android:id="@+id/rl4"
+                layout="@layout/service_itemlayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl3" />
+
+            <!-- Service Actions Panel -->
+            <include
+                layout="@layout/service_itemlayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl4" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

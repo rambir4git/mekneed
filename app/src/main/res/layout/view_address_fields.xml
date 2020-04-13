@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/size20dp">
+
+    <TextView
+        android:id="@+id/heading_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/lbl_add_address_add_details"
+        android:textSize="@dimen/text_size11sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ll_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading_1"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edittxt_location_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_style"
+                android:fontFamily="@font/gotham_medium"
+                android:hint="@string/lbl_complete_address"
+                android:inputType="textPostalAddress"
+                android:textSize="@dimen/text_size12sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edittext_location_landmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_style"
+                android:fontFamily="@font/gotham_medium"
+                android:hint="@string/lbl_add_address_landmark"
+                android:inputType="textPostalAddress"
+                android:textSize="@dimen/text_size12sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edittext_location_locality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_style"
+                android:fontFamily="@font/gotham_medium"
+                android:hint="@string/lbl_add_address_locality"
+                android:inputType="textPostalAddress"
+                android:textSize="@dimen/text_size12sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edittext_location_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_style"
+                android:fontFamily="@font/gotham_medium"
+                android:hint="@string/lbl_add_address_city"
+                android:inputType="textPostalAddress"
+                android:textSize="@dimen/text_size12sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/heading_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_address"
+        android:layout_marginBottom="@dimen/size20dp"
+        android:layout_marginLeft="@dimen/size10dp"
+        android:layout_marginTop="@dimen/size20dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="@string/lbl_add_address_save_addressAs"
+        android:textSize="@dimen/text_size11sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/heading_2"
+        android:layout_marginBottom="@dimen/size10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_location_home"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_border_dashed"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgview_location_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_icon_colored" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtview_location_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/lbl_add_address_home"
+                android:textColor="@color/color_location_select"
+                android:textSize="@dimen/text_size10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_location_office"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_border_dashed"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgview_location_office"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/office_icon_faded" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtview_location_office"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/lbl_add_address_office"
+                android:textColor="@color/color_location_unselect"
+                android:textSize="@dimen/text_size10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_location_others"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_border_dashed"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgview_location_others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/other_icon_faded" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtview_location_others"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/lbl_add_address_others"
+                android:textColor="@color/color_location_unselect"
+                android:textSize="@dimen/text_size10sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

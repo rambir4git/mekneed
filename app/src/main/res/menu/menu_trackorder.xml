@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/sharing"
+        android:icon="@drawable/share_icon"
+        android:title="sharing"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/technical_support"
+        android:icon="@drawable/technicalsupport_icon"
+        android:title="technical support"
+        app:showAsAction="always"/>
+
+</menu>

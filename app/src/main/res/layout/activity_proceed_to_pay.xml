@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Cart.CartDateAndTimePage">
+
+    <include layout="@layout/toolbar_1" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="56dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="Select Date"
+                android:background="@color/app_grey"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size14sp" />
+
+
+            <FrameLayout
+                android:id="@+id/date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="8dp">
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mcv_arrowColor="#dfdfdf"
+                    android:background="@color/white"
+                    app:mcv_dateTextAppearance="@style/UI_Calendar_DateText"
+                    app:mcv_firstDayOfWeek="monday"
+                    app:mcv_headerTextAppearance="@style/UI_Calendar_Header"
+                    app:mcv_leftArrowMask="@drawable/arrow_left"
+                    app:mcv_rightArrowMask="@drawable/arrow_right"
+                    app:mcv_selectionColor="@color/colorPrimary"
+                    app:mcv_showOtherDates="none"
+                    app:mcv_titleAnimationOrientation="vertical"
+                    app:mcv_weekDayTextAppearance="@style/UI_Calendar_WeekDay" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center_vertical"
+                android:text="Select Time"
+                android:background="@color/app_grey"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size14sp" />
+
+            <include
+                android:id="@+id/pickup_time"
+                layout="@layout/datetime_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView4"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="@dimen/text_size16dp"
+                android:layout_marginRight="16dp"/>
+
+            <include
+                android:id="@+id/layout_time"
+                layout="@layout/datetime_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pickup_time"
+                android:layout_marginTop="24dp" />
+
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</FrameLayout>

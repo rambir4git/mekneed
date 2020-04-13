@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/toolbar_1"
+        android:id="@+id/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="none"
+
+        >
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="120dp">
+
+            <TextView
+                android:id="@+id/tv_service_type"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service Type"
+                android:textColor="@color/black3"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_marginStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Denting Painting"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gotham_medium"
+                android:textSize="16sp"
+
+                android:layout_gravity="center"
+
+                />
+
+            <include
+                android:layout_below="@id/tv_service_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_package"
+                android:id="@+id/service_item" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_detail"
+                android:layout_below="@id/service_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_enter_details"
+
+                android:layout_below="@id/recycler_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Details"
+                android:textColor="@color/black3"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp" />
+
+            <EditText
+                android:id="@+id/et_describe_problem"
+                android:layout_below="@id/tv_enter_details"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Describe your problem..."
+                android:fontFamily="@font/gotham_book"
+                android:textSize="14sp"
+                android:gravity="top"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:inputType="textMultiLine"
+                android:background="@drawable/shape_border_trans"
+                android:textColor="@color/grey_white" />
+
+            <TextView
+                android:id="@+id/tv_added_services"
+                android:layout_below="@id/et_describe_problem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Added services"
+                android:textColor="@color/black3"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_marginStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <LinearLayout
+                android:id="@+id/charge_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/tv_added_services"
+                android:background="@drawable/rectangular_background"
+                android:padding="8dp"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:id="@+id/subtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Total"
+                        android:fontFamily="@font/gotham_medium"
+                        android:textColor="@color/grey_white"
+                        android:gravity="start" />
+
+                    <TextView
+                        android:id="@+id/value_subtotal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="\u20b9 3200"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Tax"
+                        android:fontFamily="@font/gotham_medium"
+                        android:textColor="@color/grey_white"
+                        android:gravity="start" />
+
+                    <TextView
+                        android:id="@+id/value_tax"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="\u20b9 200"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Additional Charges*"
+                        android:fontFamily="@font/gotham_medium"
+                        android:textColor="@color/grey_white"
+                        android:gravity="start" />
+
+                    <TextView
+                        android:id="@+id/value_charges"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="\u20b9 100"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:fontFamily="@font/gotham_medium"
+                        android:textColor="@color/grey_white"
+                        android:gravity="start" />
+
+                    <TextView
+                        android:id="@+id/value_total"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="\u20b9 200"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="end" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_images"
+                android:layout_below="@id/charge_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Images"
+                android:textColor="@color/black3"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_marginStart="16dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontal_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_below="@id/tv_images"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white" />
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proceed to Pay"
+            android:textAllCaps="false"
+            android:background="@drawable/background_button1"
+            android:textColor="@color/white"
+            style="@style/button_style_1" />
+    </FrameLayout>
+
+
+</RelativeLayout>

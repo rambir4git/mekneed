@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/rectangular_background"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/need_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Need help!"
+        android:padding="16dp"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/montserrat_semi_bold"/>
+
+
+    <TextView
+        android:id="@+id/view_job_or_send_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_job_card"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_marginLeft="32dp"
+        style="@style/button_style_1"/>
+
+</LinearLayout>
+
+

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="Phone Number"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/gotham_book_regular"
+                    android:text="@string/enter_phone_"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="56dp"
+                    app:hintTextAppearance="@style/TextLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_book_regular"
+                        android:hint="10 digit mobile number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingTop="16dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="56dp"-->
+                <!--android:fontFamily="@font/gotham_book_regular"-->
+                <!--android:text="10 digit mobile number"-->
+                <!--android:textSize="8sp" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/phone_no"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:inputType="number"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:fontFamily="@font/gotham_book_regular"-->
+                <!--android:maxLength="10"-->
+                <!--android:textSize="16sp"-->
+                <!--android:layout_marginLeft="-4dp"-->
+                <!--android:textColor="@color/black" />-->
+
+                <Button
+                    android:id="@+id/proceed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:background="@drawable/background_button1"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="Proceed"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!--FAQ-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_carrer"
+                    android:layout_gravity="center"
+                    android:scaleY="1.4"
+                    android:layout_marginEnd="16dp" />
+
+
+                <TextView
+                    android:id="@+id/careers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+
+
+                    android:drawableRight="@drawable/ic_arrow_right"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="Careers"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/faq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:drawableLeft="@drawable/faq"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="FAQ's"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/send_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/feedback"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:paddingTop="8dp"
+                android:paddingBottom="16dp"
+                android:text="Send Feedback"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</FrameLayout>

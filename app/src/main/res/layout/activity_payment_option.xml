@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RazorpayGateway.PaymentOptions">
+
+    <!--Toolbaar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/arrow_back_red" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Payment Options"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background4"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_marginTop="67dp"
+        android:id="@+id/swipe_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/total_amount"
+                    android:fontFamily="@font/gotham_book_regular"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/total_amount_to_be_paid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u20B9 10000000"
+                    android:textColor="@color/black"
+                    android:padding="16dp"
+                    android:fontFamily="@font/gotham_book_regular"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:background="@drawable/rectangular_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/coins"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mekcoins wallet"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/gotham_medium_regular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/gotham_medium_regular"
+                    android:text="(Aval.Coins "
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/coins_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/gotham_medium_regular"
+                    android:text="0"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/gotham_medium_regular"
+                    android:text=")"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:enabled="false"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_marginTop="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Options"
+                android:fontFamily="@font/gotham_book_regular"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:background="@drawable/rectangular_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RazorPay"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/gotham_medium_regular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/gotham_medium_regular"
+                    android:text="(Pay \u20B9 "
+                    android:textSize="12sp" />
+
+
+
+
+
+                <TextView
+                    android:id="@+id/amount_to_be_paid_by_gateway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/gotham_medium_regular"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/gotham_medium_regular"
+                    android:text=")"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_razorpay"
+                    android:layout_width="wrap_content"
+                    android:enabled="false"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay"
+        android:enabled="false"
+        android:layout_margin="16dp"
+        android:textAllCaps="false"
+        android:background="@color/lignt_pink"
+        android:layout_gravity="bottom"
+        style="@style/button_style_1"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+</FrameLayout>

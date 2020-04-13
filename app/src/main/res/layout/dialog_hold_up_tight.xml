@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="56dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/hold_screen1"/>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hold up Tight !"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textSize="16sp"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
+            android:layout_marginTop="44dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/hold2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@mipmap/hold_screen2"/>
+
+            <ImageView
+                android:id="@+id/image_car"
+                android:layout_marginTop="98dp"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:src="@drawable/car_red"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_wait"
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wait for a while, finding\nfinding best partner driver for you"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:layout_gravity="center" />
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

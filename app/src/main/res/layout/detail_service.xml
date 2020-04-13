@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <include
+        layout="@layout/toolbar_1"
+        android:id="@+id/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:scrollbars="none"
+
+        >
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/tv_service_type"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service Type"
+                android:textColor="@color/black3"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_marginStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+
+            <TextView
+                android:layout_below="@id/tv_service_type"
+                android:id="@+id/tv_service_name"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:text="Denting Painting"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gotham_medium"
+                android:textSize="16sp"
+                android:background="@drawable/rectangular_background"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:padding="8dp"
+
+
+                />
+
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_below="@id/tv_service_name"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:text="Description"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="14sp"
+                android:gravity="top"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+
+                android:layout_marginTop="8dp"
+
+                android:background="@drawable/rectangular_background"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_added_services"
+                android:layout_below="@id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Added services"
+                android:textColor="@color/black3"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_marginStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <LinearLayout
+                android:id="@+id/charge_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/tv_added_services"
+                android:background="@drawable/rectangular_background"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:id="@+id/subtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+
+
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Total"
+                        android:fontFamily="@font/gotham_medium"
+                        android:textColor="@color/grey_white"
+                        android:gravity="start" />
+
+                    <TextView
+                        android:id="@+id/value_subtotal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="\u20b9 3200"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:gravity="end" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Additional Charges*"
+                        android:fontFamily="@font/gotham_medium"
+                        android:textColor="@color/grey_white"
+                        android:gravity="start" />
+
+                    <TextView
+                        android:id="@+id/value_charges"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="\u20b9 0"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:fontFamily="@font/gotham_medium"
+                        android:textColor="@color/grey_white"
+                        android:gravity="start" />
+
+                    <TextView
+                        android:id="@+id/value_total"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="\u20b9 200"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="New Total"
+                        android:fontFamily="@font/gotham_medium"
+                        android:textColor="@color/grey_white"
+                        android:gravity="start" />
+
+                    <TextView
+                        android:id="@+id/value_new_total"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="\u20b9 200"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:gravity="end" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_images"
+                android:layout_below="@id/charge_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Images"
+                android:textColor="@color/black3"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:layout_marginStart="16dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp" />
+
+            <HorizontalScrollView
+                android:layout_below="@id/tv_images"
+                android:id="@+id/horizontal_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:scrollbars="none"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+
+
+                    >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="8dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:src="@drawable/image_placeholder" />
+
+                        <ImageView
+                            android:id="@+id/iv_cross"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="end"
+                            android:layout_margin="8dp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="8dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+
+                            android:src="@drawable/image_placeholder" />
+
+                        <ImageView
+                            android:id="@+id/iv_cross2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="end"
+                            android:layout_margin="8dp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+
+                            android:src="@drawable/image_placeholder" />
+
+                        <ImageView
+                            android:id="@+id/iv_cross3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="end"
+                            android:layout_margin="8dp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/pay_job_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proceed to Pay"
+            android:textAllCaps="false"
+            android:background="@drawable/background_button1"
+            android:textColor="@color/white"
+            style="@style/button_style_1" />
+    </FrameLayout>
+
+
+</RelativeLayout>

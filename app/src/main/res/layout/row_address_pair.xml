@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:paddingLeft="@dimen/text_size16dp"
+    android:paddingRight="@dimen/text_size16dp"
+    android:background="@drawable/border_white"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/radiobutton"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/selector_radio"
+        android:button="@null" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Home"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:layout_marginLeft="@dimen/text_size16dp"
+        android:textSize="12sp" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/remove"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="@font/montserrat_regular"-->
+        <!--android:text="remove"-->
+        <!--android:layout_marginLeft="@dimen/text_size16dp"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--android:textSize="12sp" />-->
+
+
+
+
+</LinearLayout>

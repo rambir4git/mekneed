@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/base"
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:padding="4dp"
+                android:text="Front Door Scratch"
+                android:textColor="@color/black"
+                android:drawableLeft="@drawable/white_dot"
+                android:drawablePadding="8dp"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tv_original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginStart="20dp"
+                android:text="500"
+                android:textColor="@color/red_button"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_payment_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="20dp"
+                android:text="Payment Awaited"
+                android:textColor="@color/red_button"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="20dp"
+                android:text="\u20b9 450"
+                android:textColor="@color/red_button"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="20dp"
+                android:text="Negotiated price"
+                android:textColor="@color/red_button"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="4dp"
+                android:text="Details"
+                android:layout_gravity="end"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:drawablePadding="4dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/red_button"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/smily_neg_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_smily_meh"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tv_neg_applied"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Negotiation applied"
+                android:textSize="10sp"
+                android:textColor="@color/red_button"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginRight="16dp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/part_request_negotiable_price"
+        android:layout_below="@id/base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:id="@+id/req_price"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_below="@id/req_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/chart_deep_red"
+            android:text="Accept"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:theme="@style/button_style_1" />
+
+        <Button
+            android:id="@+id/btn_reject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:background="#5b5656"
+            android:text="Reject"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:theme="@style/button_style_1" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*Approve by 10 hr, 33 min"
+        android:layout_below="@id/btn_layout"
+        android:id="@+id/tv_approve_by"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/red_button"
+        android:fontFamily="@font/gotham_book_regular"
+        android:textSize="12sp"
+        android:layout_marginBottom="8dp" />
+
+
+</RelativeLayout>

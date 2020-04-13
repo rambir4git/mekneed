@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    >
+
+    <include
+        layout="@layout/toolbar_1"
+        android:id="@+id/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Please rate your experience."
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Do let us know your thoughts, \n your thoughts matter to us."
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat_light" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/feedback_face"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp" />
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            style="@style/feedbackRatingBar"
+            android:numStars="5"
+            android:stepSize="0.1"
+            android:rating="3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Details"
+            android:textSize="10sp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat_regular" />
+
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/rectangular_background"
+            android:hint="Describe your problem.."
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="top"
+            android:layout_marginTop="8dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        style="@style/button_style_1"
+        android:text="Submit Feedback"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

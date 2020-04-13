@@ -1,0 +1,468 @@
+<resources>
+    <array name="material_calendar_months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </array>
+
+    <string name="app_name">MekVahan</string>
+
+    <!--Facebook constants -->
+    <string name="facebook_app_id">159814198469500</string>
+    <string name="fb_login_protocol_scheme">fb159814198469500</string>
+
+
+    <!-- Misc -->
+    <string name="app_version">2019 Mekvahan, App Version 1.3</string>
+    <string name="progress_tobeimpl">To be implemented</string>
+    <string name="splash">splash</string>
+    <string name="service_perfection">Service with perfection</string>
+    <string name="smart_way">Smartest way of care your myVehicleTable</string>
+    <string name="emanated_india">Emanated in India</string>
+    <string name="please_allocate">Please allocate your myVehicleTable and insert following details.</string>
+
+    <string name="lorem_ipsum1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+        recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="lorem_ipsum">Lorem ipsum is empty dummy text of the printing and typesetting industry</string>
+
+
+    <string name="start">Start Servicing</string>
+    <string name="my_vehicle">My Vehicle</string>
+    <string name="next">Next</string>
+    <string name="see_all">See all FAQs</string>
+    <string name="account">Account</string>
+    <string name="login_enjoy">Login to enjoy hassle free and full access to our service</string>
+    <string name="better_service">Better Service</string>
+    <string name="happy_customers">Happy Customers</string>
+
+    <string name="login">Login</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="otp_send">OTP Send to</string>
+    <string name="forget_pass">Forget Password?</string>
+    <string name="faqs">FAQ\'s</string>
+    <string name="feedback">Send Feedback</string>
+    <string name="enter_phonpass">Enter phone and password to continue</string>
+    <string name="tendigit">10 digit mobile number</string>
+    <string name="pass">Password</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="signup">Signup</string>
+    <string name="create_new_account">Create a new account with Mekvahan</string>
+    <string name="email_id">Email Id</string>
+    <string name="password">Password</string>
+    <string name="referal_code">I have a referral code</string>
+    <string name="by_creating_text">By creating an account, </string>
+    <string name="i_accept">I accept the</string>
+    <string name="term_condition">Terms &amp; Conditions</string>
+
+    <string name="Rs">\u20B9</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="brand">Maruti Suzuki</string>
+    <string name="car">Wagan R</string>
+
+    <string name="car_num">DL1R0ABC</string>
+    <string name="change_pass">Change Password</string>
+    <string name="valid_to">Valid to :</string>
+    <string name="lbl_rc_number">RC Number</string>
+    <string name="lbl_driving_license">Driving License</string>
+    <string name="no_access">You cannot access the full benefits of app until your id is verified.</string>
+    <string name="five_coins">5 coins will be charged for one call.</string>
+    <string name="three_coins">3 coins will be charged for one sms.</string>
+    <string name="done">Done</string>
+    <string name="lbl_password_reset">Reset Password</string>
+    <string name="number">Mobile Number</string>
+    <string name="checkout">Checkout</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="cod_text">COD(Cash On Delivery)</string>
+    <string name="saved_card">Saved Cards</string>
+
+
+    <string name="payment_option">Payment Option</string>
+    <string name="my_car">Car</string>
+
+
+    <string name="my_byke">Bike</string>
+    <string name="standard_service">Standard Service</string>
+    <string name="maruti_suzuki">Maruti Suzuki</string>
+    <string name="wagan_r">Wagan R</string>
+    <string name="description">Description</string>
+    <string name="free_pickup">Free pick-up and drop.</string>
+    <string name="twenty_point">20 point check-up.</string>
+    <string name="replacement">Replacement of different consumables parts</string>
+    <string name="refilling">Refilling of diffrent fuel top-ups(such as break fluid, engine oil, wiper fluid etc.)</string>
+    <string name="free_exterior">Free exterior wash.</string>
+    <string name="free_interior">Free interior cleaning, vacuuming and polishing.</string>
+    <string name="ten_days">10 days service support.</string>
+    <string name="what_all">What all is covered ?</string>
+    <string name="complete_exterior">Complete exterior wash.</string>
+    <string name="inspection">20 point inspection.</string>
+    <string name="interior">Interior vacuuming , polishing and cleaning.</string>
+    <string name="dashboardoorpolish">Dashboard and door polish.</string>
+    <string name="parts_replacement">Parts replacement</string>
+    <string name="name">Name</string>
+    <string name="item_action">Item Action</string>
+    <string name="check_mobile_number">Verify Number</string>
+    <string name="lbl_login">Login</string>
+    <string name="enterpassword">Enter Password</string>
+    <string name="enter_code">Enter referal code</string>
+    <string name="order_detail">Order Details</string>
+    <string name="package_detail">Package Details</string>
+    <string name="payment_detail">Payment Details</string>
+    <string name="service_loc">Service Location</string>
+    <string name="service_datetime">Service date and time</string>
+    <string name="payment_success">Payment Successfull</string>
+    <string name="payment_failure">Payment Unsuccessfull</string>
+
+    <string name="booking_success">Booking Successfull</string>
+    <string name="our_representative">Our representative will pick your myVehicleTable  at given date and time.</string>
+    <string name="trackorder">Track Order</string>
+    <string name="err_msg_password">Password is not valid !</string>
+
+    <string name="err_minimum_password">Enter minimum password</string>
+    <string name="pickup_address">Pickup address</string>
+    <string name="drop_address">Drop address</string>
+    <string name="enter_details">Enter details</string>
+    <string name="in_case">In case of additional notes</string>
+    <string name="subtotal">Sub Total</string>
+    <string name="tax">Tax</string>
+    <string name="additional_charges">Additional charges*</string>
+    <string name="total">Total</string>
+    <string name="tnc"><![CDATA[T & C Apply*]]></string>
+    <string name="inviteandearn">INVITE AND EARN</string>
+    <string name="Referyourfreind"><![CDATA[Refer your freind & both get Rs. 50 off on the next order above Rs. 100.]]></string>
+    <string name="wanttopay">want to pay less for your service bill?</string>
+    <string name="howitwork">How it works</string>
+    <string name="viewyourreferral">View your referrals</string>
+
+
+    <string name="sharetheinvite">Share the \'Invite Code\' with your friend.</string>
+    <string name="material_calendar_monday">Mon</string>
+    <string name="material_calendar_tuesday">Tue</string>
+    <string name="material_calendar_wednesday">Wed</string>
+    <string name="material_calendar_thursday">Thu</string>
+    <string name="material_calendar_friday">Fri</string>
+    <string name="material_calendar_saturday">Sat</string>
+    <string name="material_calendar_sunday">Sun</string>
+    <string name="Set_pass">Set Password</string>
+    <string name="enter_yourpas">Enter your new password</string>
+    <string name="new_pass">New Password</string>
+
+    <string name="confirm_pass">Confirm Password</string>
+
+    <string name="title_activity_track_order">Track Order</string>
+    <string name="booking_datetime">Booking date and time</string>
+    <string name="pickup_datetime">Pickup date and time</string>
+    <string name="make_call">Click to make a call</string>
+    <string name="emergency_towing">Emergency towing</string>
+    <string name="details">Details</string>
+    <string name="car_wash">Car wash</string>
+    <string name="payment_awaited">Payment awaited</string>
+    <string name="view_jobcard">View Job Card</string>
+    <string name="job_table">Job Table</string>
+    <string name="track_details">Track details</string>
+    <string name="order_id">Order ID.</string>
+    <string name="service_center">Service centre</string>
+    <string name="require_pickup">Require Pickup</string>
+    <string name="referandearn">Refer And Earn</string>
+    <string name="prefer_this">Prefer this to your friends  and earn awards</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="service_type">Service type</string>
+    <string name="added_services">Added Services</string>
+    <string name="images">Images</string>
+    <string name="please_rate">Please rate your experience.</string>
+    <string name="submit_feedback">Submit Feedback</string>
+    <string name="sameas">Same as Pickup Address</string>
+    <string name="mekcoinswallet">Mekcoins wallet</string>
+    <string name="bookings">Bookings</string>
+    <string name="serviceinpogress">Service in Progress</string>
+    <string name="your_payment">Your Payment was successful you can continue for more services.</string>
+
+    <!-- Screen : About Us -->
+    <string name="toolbar_title_aboutus">About Us</string>
+    <string name="section_title_aboutus">About Mekvahan</string>
+    <string name="para_aboutus">@string/lorem_ipsum1</string>
+    <string name="lbl_contactus">Contact Us</string>
+    <string name="lbl_office_address">Office Address:-\nMekvahan\nF-302, AIACTR Geeta Colony,\nNew Delhi - 110077</string>
+    <string name="lbl_office_email">Email:- support@mekvahan.com</string>
+    <string name="lbl_office_connect">Connect\n[ 9AM - 9PM ] :- +91 7838878899</string>
+
+    <!-- Screen : SignupActivity -->
+    <string name="err_no_connection1">Please check your Internet connection!</string>
+    <string name="err_msg_name">Enter Name</string>
+    <string name="err_msg_phone">Enter Phone Number</string>
+    <string name="err_msg_email">Enter Email</string>
+    <string name="err_msg_valid_email">Enter valid email</string>
+    <string name="err_msg_password1">Enter password</string>
+    <string name="err_minimum_password1">Password is too short, enter minimum 6 characters!</string>
+    <string name="err_invalid_phone_number">Enter valid phone number</string>
+
+    <!-- Screen : Hands Free Access -->
+    <string name="to_activate">To activate this functionality,we need the following information:</string>
+    <string name="heading_handree">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</string>
+    <string name="hands_free">Hands free access</string>
+    <string name="heading_handfree2">Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</string>
+    <string name="vehicle_detail">Vehicle details</string>
+    <string name="valid_card">A valid card</string>
+    <string name="personal_info">Your personal information</string>
+    <string name="btn_activate">Activate</string>
+
+    <!-- Screen : My Vehicles -->
+    <string name="lbl_intro_myvehicles">Looks like you don\'t have\nany saved vehicles!</string>
+    <string name="lbl_choose_default_vehicle">Choose your default myVehicleTable</string>
+    <string name="btn_add_vehicles">Add New Vehicle</string>
+
+    <!-- Screen : Add New Vehicles -->
+
+    <!-- Menu : Dashboard Sidebar Navigation Menu -->
+    <string name="lbl_menu_home">Home</string>
+    <string name="lbl_menu_profile">Profile</string>
+    <string name="lbl_menu_profile_slot">Slot Management</string>
+    <string name="lbl_menu_profile_contact_info_mgmt">Contact Info Management</string>
+    <string name="lbl_menu_myvehicle">My Vehicle</string>
+    <string name="lbl_menu_myaddress">My Address</string>
+    <string name="lbl_menu_bookings">Bookings</string>
+    <string name="lbl_menu_bookings_new">New Bookings</string>
+    <string name="lbl_menu_bookings_upcoming">Upcoming Bookings</string>
+    <string name="lbl_menu_bookings_ongoing">OnGoing Bookings</string>
+    <string name="lbl_menu_bookings_history">History</string>
+    <string name="lbl_menu_bookings_history_transaction">Transaction History</string>
+    <string name="lbl_menu_mekcoins_wallet">Mekcoins Wallet</string>
+    <string name="lbl_menu_notifications">Notifications</string>
+    <string name="lbl_menu_aboutus">About Us</string>
+    <string name="lbl_menu_help">Help</string>
+    <string name="lbl_menu_support">Support</string>
+    <string name="lbl_menu_faqs">FAQs &amp; Links</string>
+    <string name="lbl_menu_referrals">Referrals</string>
+    <string name="lbl_menu_offers">Offers</string>
+    <string name="lbl_menu_logout">Logout</string>
+
+    <!-- Screen : Dashboard -->
+    <string name="lbl_services_general_service">General service</string>
+    <string name="lbl_services_repairing">Repairing</string>
+    <string name="lbl_services_wheel_care">Wheel Care</string>
+    <string name="lbl_services_dent_painting">Denting Painting</string>
+    <string name="lbl_services_car_care">Car Care</string>
+    <string name="lbl_services_body_part_fixers">Body Part Fixers</string>
+    <string name="lbl_services_others">Others</string>
+
+    <!-- Screen : Profile -->
+    <string name="toolbar_title_profile">Profile</string>
+
+    <!-- Screen : My Address -->
+    <string name="toolbar_title_myaddress">My Addresses</string>
+    <string name="lbl_no_addresses">Looks like you don\'t have \n any saved address !</string>
+    <string name="lbl_no_vehicles">Looks like you don\'t have \n any saved myVehicleTable !</string>
+    <string name="btn_add_address">Add Address</string>
+    <string name="btn_add_new_address">Add New Address</string>
+
+    <!-- Screen : Add New Address -->
+    <string name="toolbar_title_add_new_address">Add New Address</string>
+    <string name="lbl_use_current_location">Use Current Location</string>
+    <string name="lbl_complete_address">Complete Address</string>
+    <string name="lbl_add_address_add_details">Add details</string>
+    <string name="lbl_add_address_landmark">Landmark</string>
+    <string name="lbl_add_address_locality">Locality</string>
+    <string name="lbl_add_address_city">City</string>
+    <string name="lbl_add_address_save_addressAs">Save address as :</string>
+    <string name="lbl_add_address_home">Home</string>
+    <string name="lbl_add_address_office">Office</string>
+    <string name="lbl_add_address_others">Others</string>
+    <string name="btn_save_address">Save Address</string>
+
+    <!-- Screen : Booking -> Select Date and Time -->
+    <string name="lbl_selectdatetime">Select Date and Time</string>
+
+    <!-- Screen : Feedback -->
+    <string name="toolbar_title_feedback">Feedback</string>
+    <string name="lbl_feedback_please_rate">Please rate your experience.</string>
+    <string name="lbl_feedback_thoughts">Do let us know your thoughts, \n your thoughts matter!</string>
+    <string name="lbl_feedback_enter_details">Enter Details</string>
+    <string name="hint_feedback_describe_problem">Describe your problem ...</string>
+    <string name="btn_feedback_submit">Submit Feedback</string>
+
+    <!-- Screen  : MekCoins Wallet -->
+    <string name="toolbar_title_mekcoins_wallet">MekCoins Wallet</string>
+    <string name="lbl_available_coins">Available Coins</string>
+    <string name="lbl_promocode">Promocode ?</string>
+    <string name="btn_add_money">Add Money</string>
+    <string name="lbl_statement">Statement</string>
+    <string name="lbl_faqs">FAQs</string>
+
+    <!-- Screen : MekCoins Statement -->
+    <string name="toolbar_title_mekcoins_statement">MekCoins Statement</string>
+    <string name="lbl_current_coins">Current Coins</string>
+    <string name="lbl_value_of_1">Value of 1 coin = ₹ 1</string>
+    <string name="lbl_history">History</string>
+    <string name="lbl_yesterday">Yesterday, %s</string>
+    <string name="lbl_money_added">Money Added</string>
+    <string name="lbl_money_deducted">Money Deducted</string>
+
+    <!-- Bookings Labels -->
+    <string name="lbl_service_complete">Service Complete</string>
+    <string name="lbl_service_in_progress">Service In Progress</string>
+    <string name="lbl_service_confirm_awaited">Awaiting Confirmation</string>
+
+    <!-- Payment Labels -->
+    <string name="lbl_payment_awaited">Payment Awaited</string>
+    <string name="lbl_payment_completed">Payment Completed</string>
+    <string name="lbl_payment_confirmed">Payment Confirmed</string>
+
+    <!-- Screen : SOS -->
+    <string name="lbl_sos_fuel_assist">Emergency Fuel\nAssistance</string>
+    <string name="lbl_sos_flat_tyre">Flat Tyre</string>
+    <string name="lbl_sos_battery_jumpstart">Battery Jumpstart</string>
+    <string name="lbl_sos_emergency_towing">Emergency Towing</string>
+    <string name="lbl_sos_key_recovery">Key Recovery</string>
+    <string name="lbl_sos_onsite_assist">Onsite Assistance</string>
+
+
+    <string name="how_it_works">How it Works</string>
+    <string name="smart_parking_featured">Smart Parking Featured</string>
+    <string name="featured_venues">Featured Venues</string>
+    <string name="where_to_park">Where to Park?</string>
+    <string name="everywhere_you_want_to_park">Everywhere you want to Park</string>
+    <string name="for_more_automobile_related_problem_visit">For more automobile related problem, visit</string>
+    <string name="are_you_a">Are you a</string>
+    <string name="parking_provider">Parking Provider?</string>
+    <string name="short_desc">Lorem Ipsum is simply dummy text of the printing
+        and typesetting industry.</string>
+
+    <string name="find_desc">Find your favourite parking spot at any location.</string>
+    <string name="locate_on_map_desc">Locate the place of your choice on the map.</string>
+    <string name="navigate_desc">MekPark will navigate your selected location.</string>
+    <string name="advance_book_desc">After you have navigated your parking spot, you can now book it in advance to avoid it getting reserved by other.</string>
+    <string name="park_desc">Just Park. Congratulations!</string>
+
+    <string name="free_parking_desc">Are you having difficulty finding free parking? We will help you get free parking locations here. </string>
+    <string name="paid_parking_desc">With paid parking, you get a chance of security. Navigate your nearest parking spot and park your myVehicleTable. </string>
+    <string name="garage_parking_desc">The safest, cheapest and best parking spot ever provided to you, only by MekPark. </string>
+    <string name="college_parking_desc">Now, no more late class sessions due to the parking problem. Get your parking spot ready with just one tap.</string>
+    <string name="airport_parking_desc">We have got you covered at the airport too. Now, get your car parked at the lowest price ever with the highest security. </string>
+    <string name="perfect_spot_to_park">Find your perfect\nspot to park.</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="nearby_parking_area">Nearby Parking\narea available</string>
+    <string name="vacant_slots">Vacant\nslots</string>
+    <string name="title_activity_single_marker_map">Map</string>
+    <string name="book_now">Book Now</string>
+    <string name="navigate">Navigate</string>
+    <string name="title_activity_book_now">BookNow</string>
+    <string name="title_activity_park_me_map">Map</string>
+    <string name="add_vehicle_location">Add myVehicleTable location</string>
+    <string name="best_service_nhappy_customers">Best Service\nHappy Customers</string>
+    <string name="login_to_enjoy_">Login to enjoy hassle-free and full access of our service</string>
+    <string name="enter_phone_">Enter phone number to continue</string>
+    <string name="i_have_">I have a referral code</string>
+    <string name="by_creating_">By creating an account,</string>
+    <string name="smartest_way_">Smartest way of Care your Vehicle</string>
+    <string name="emanated_in_">Emanated in India</string>
+    <string name="park_with_">Service with Perfection</string>
+
+    <string name="skip">skip</string>
+    <string name="profile">Profile</string>
+    <string name="longtext1">Contrary to popular belief, Lorem Ipsum is not simply random text.
+        It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</string>
+    <string name="hand_free_access_text">Mekvahan offers a diverse range of services and features to make its customer’s life easy. Hence, if you want to avail all such services and benefits and want to utilize the variety of features, then please fill and provide the required informations below.</string>
+
+    <string name="please_allocate_">Please allocate your myVehicleTable and insert following details</string>
+    <string name="choose_your_">choose your default myVehicleTable</string>
+    <string name="add_vehicle">Add Vehicle</string>
+    <string name="remove">remove</string>
+    <string name="manilal_kasera">Manilal Kasera!</string>
+    <string name="value_of_">Value of 1 coin = ₹ 1</string>
+    <string name="title_activity_proceed_to_pay_map">Map</string>
+    <string name="new_bookings">New Bookings</string>
+    <string name="scan_licence">Scan Licence Plate no.</string>
+    <string name="a_message_">A Message has been send to the owner of the myVehicleTable.</string>
+    <string name="message_to_vehicle_owner">Bhai apna gaddi hatao, kisi durse ki gaadi phasi hai.</string>
+    <string name="rupee">₹ </string>
+    <string name="title_activity_camhomepage">Map</string>
+    <string name="title_activity_chauffeur_p2_p">Map</string>
+    <string name="get_flat_">Get Flat Rs.50 of Cashback On min. tranction of Rs. 300</string>
+    <string name="t_amp_c_apply"><![CDATA[T&C Apply*]]></string>
+    <string name="refer_1">Help us grow by introducing Mekvahan to your friends. On every friend you invite, you can get upto Rs. 500 off</string>
+    <string name="invite_and_earn">INVITE AND EARN</string>
+    <string name="want_to_">Want to pay less for your service bill?</string>
+    <string name="it_semms_">It semms no one using your referral code at the moment.</string>
+    <string name="about_mekvahan">About mekvahan</string>
+    <string name="congrats_">\"Congrats\", The Customer is approaching you to clear the blockage.</string>
+    <string name="the_user_got_">\"Oops\", The User got stuck somewhere.</string>
+    <string name="the_call_">\"Oops\", The call is disconnected by user.</string>
+    <string name="title_activity_add_new_address_page">Map</string>
+
+
+    <string name="onboard_1">Mekvahan is a network of technology-enabled car &amp; bike service centres, offering a seamless service experience at the convenience of a tap</string>
+    <string name="onboard_2">Our vast network of Car &amp; Bike Service Centres uses only OEM/OES spare parts and high-quality consumables which ensures, what goes into your vehicle is nothing but the best.</string>
+    <string name="onboard_3">India’s best automobile service venture that aims at providing its outstanding assistance &amp; services to all the two- &amp; four-wheeler vehicle owners.</string>
+    <string name="login_1">Sharing smile through vehicle caring as your vehicle deserves the best</string>
+    <string name="how_it_works_1"><![CDATA[After you refer someone, you and the referee each will get a credit of Rs 100 & Rs.50 in your respective wallets (after both of you download the app) and an additional credit of Rs. 25 & Rs. 75 (after both of you complete the first service of minimum Rs. 500 ).]]></string>
+
+    <string name="how_it_works_2">The referral reward-amount earned, for both the referrer and referee, is not refundable in case the customer cancels his/her service."</string>
+    <string name="how_it_works_3">The referral reward-amount earned, for both the referrer and referee, will be based on the ‘number of services\'.</string>
+    <string name="max_allowed">Max referral allowed is 20 per user.</string>
+    <string name="referral_waring">Company reserves the right to reject referral benefit to the customer.</string>
+
+
+    //Track page
+
+    <string name="use_current_location">Use Current Location</string>
+    <string name="floating_phone">floating phone</string>
+    <string name="display_picture">display picture</string>
+    <string name="mekvahan">Mekvahan</string>
+    <string name="dummy_orderid">152290722651</string>
+    <string name="service_centre">Service centre</string>
+    <string name="dummy_servicecentre">214 Overlook Circle, Suite 220, Delhi</string>
+    <string name="_02_10_am">02:10 am</string>
+    <string name="_12_07_18">12–07–18</string>
+    <string name="your_order_has_been_received">Your order has been received</string>
+    <string name="your_order_has_been_confirmed">Your order has been confirmed</string>
+    <string name="we_are_on_the_way_to_pickup_your_vehicle">We are on the way to pickup your vehicle</string>
+    <string name="vehicle_picked_up">Vehicle picked up</string>
+    <string name="vehicle_servicing_in_progress">Vehicle servicing in progress</string>
+    <string name="servicing_of_your_vehicle_is_complete">Servicing of your vehicle is complete</string>
+    <string name="vehicle_dropped">Vehicle dropped</string>
+    <string name="refer_this_to_your_friends_and_earn_rewards">Refer this to your friends \n and earn rewards</string>
+    <string name="refer_and_earn">Refer and Earn</string>
+    <string name="need_time_to_get_ready">Need time to get ready</string>
+    <string name="want_to_change_drop_location">Want to change drop location</string>
+    <string name="expected_a_shorter_wait_time">Expected a shorter wait time</string>
+    <string name="driver_denied_duty">Driver denied duty</string>
+    <string name="need_to_apply_coupon">Need to apply coupon</string>
+    <string name="my_reason_is_not_listed">My reason is not listed</string>
+    <string name="cancel">Cancel</string>
+    <string name="don_t_cancel">Don\'t Cancel</string>
+    <string name="cancel_activity_name">Cancel Task</string>
+    <string name="radio_tooltiptext">Choose your reason for cancellation</string>
+    <string name="cancel_activity_title">Reason for Cancellation</string>
+    <string name="colourless">colourless</string>
+    <string name="coloured">coloured</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="pay_later">Pay Later</string>
+
+    <string name="t_cs_apply"><![CDATA[T&Cs Apply*]]></string>
+    <string name="redeem_details">Create/Login to your Mekvahan account.\nSelect the service want to avail, Payment and choose your service Type in the transaction amount, in the next step use promo code NEW50 on App, complete the transaction to avail the cashback</string>
+    <string name="TnCdetails">Valid on successful Service/Bill Payments done till 31th October 2019.\nApplicable for New users only.\nNo minimum transaction only Valid only Once per New User/Credit/Debit Card/Mobile Number.\nCashback will be credited to your Mekcoins Wallet which can be redeemed within 365 days from the date of credit and is non transferable Not Valid for Add Cash Transactions and transactions done via Mekvahan Balance Offer is not applicable on virtual/prepaid/temporary/international cards NEW50 Promo Code has to be applied to avail cashback offer.\nWe reserve the right to end/modify any or all offers at our discretion without any prior notice.\nFor all other queries please email support@mekvahan.com .\nWe reserve the right to restrict cashback for any account with suspicious behavior or invalid details/credentials.\nMekvahan has the right to ask for documents to prove his/her identity for any account.</string>
+    <string name="you_cannot_">You cannot access the full benefits of the app until id is verified.</string>
+    <string name="track_order">Track Order</string>
+    <string name="booking_date_amp_time"><![CDATA[Booking date & time]]></string>
+    <string name="pickup_date_amp_time"><![CDATA[Pickup date & time]]></string>
+    <string name="click_to_make_call">Click to make call</string>
+    <string name="serving_date_amp_time"><![CDATA[Serving date & time]]></string>
+    <string name="service_location">Service Location</string>
+    <string name="need_help">Need Help ?</string>
+    <string name="view_job_card">View Job Card</string>
+    <string name="awaiting_partner_confirmation">Awaiting Partner Confirmation</string>
+    <string name="could_not_connect_to_the_internet_please_check_your_netwrok">Could not connect to the internet. Please check your network.</string>
+
+
+</resources>
