@@ -18,14 +18,13 @@
     <application
         android:name=".CommonFiles.Initializer"
         android:allowBackup="true"
-        android:icon="@mipmap/covid"
-        android:label="MekAntiCorona"
-        android:roundIcon="@mipmap/customer_logo"
+        android:icon="@mipmap/meekneeds"
+        android:label="MekNeeds"
+        android:roundIcon="@mipmap/meekneeds"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="LockedOrientationActivity">
-        <activity android:name=".JobCardActivity"></activity>
         <activity android:name=".DetailActivity" />
         <activity android:name=".AllBookingsDashboard.RegulaServices.RegularServiceDetails" />
         <activity android:name=".AllBookingsDashboard.TrackOrder2" />

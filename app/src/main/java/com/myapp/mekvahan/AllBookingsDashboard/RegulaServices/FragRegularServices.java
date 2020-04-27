@@ -40,6 +40,7 @@ public class FragRegularServices extends Fragment {
         return mRootview;
     }
 
+
     private void fetchRegularServicesList() {
 
         List<RegularServiceModel> servicesList = mActicity.getRegularServiceFromParent();

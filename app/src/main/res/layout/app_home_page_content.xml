@@ -24,10 +24,36 @@
                 android:layout_weight="1" />
 
             <!--Bottom Navigation-->
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/botton_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/app_home_page_bootom_nav">
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
         </LinearLayout>
 
     </FrameLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fab_scan"
+            android:layout_width="56dp"
+            android:elevation="8dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sostab_icon"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="20dp"
+            app:backgroundTint="@color/colorPrimary" />
+
+
+
+    </FrameLayout>
 
     <!--My vehicles - menu-->
     <androidx.cardview.widget.CardView

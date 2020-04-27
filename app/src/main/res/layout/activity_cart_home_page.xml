@@ -33,7 +33,9 @@
                 android:layout_marginRight="8dp"
                 android:id="@+id/recycler_view_carts"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
 
             <FrameLayout
                 android:id="@+id/payment_layout"

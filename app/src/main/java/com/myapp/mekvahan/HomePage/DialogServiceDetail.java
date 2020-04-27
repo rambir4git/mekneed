@@ -89,7 +89,7 @@ public class DialogServiceDetail extends DialogFragment {
 
         mServiceDetail = (ServiceModel) getArguments().getSerializable("serviceDetail");
 
-        ((TextView)mRootView.findViewById(R.id.toolbar_title)).setText("Service Detail");
+        ((TextView)mRootView.findViewById(R.id.toolbar_title)).setText("Product Detail");
         ((TextView)mRootView.findViewById(R.id.service_name)).setText(mServiceDetail.getServiceName());
 
         ((TextView)mRootView.findViewById(R.id.sub_total)).setText(mServiceDetail.getSubtotal());
@@ -151,9 +151,6 @@ public class DialogServiceDetail extends DialogFragment {
         txtview_selected_vehicle_platenum = mRootView.findViewById(R.id.txtview_selected_vehicle_platenum);
 
 
-        txtview_selected_vehicle_brand.setText("Mek Anti Corona");
-        txtview_selected_vehicle_model.setText("Covid19");
-        txtview_selected_vehicle_platenum.setText("Stay at home");
 
     }
 

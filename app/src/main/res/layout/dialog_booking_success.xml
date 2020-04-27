@@ -55,7 +55,7 @@
             android:fontFamily="@font/gotham_book_regular"
             android:textColor="@color/black3"
             android:layout_gravity=""
-            android:text="Our representative will pick your vehicle at given date and time"/>
+            android:text="Our representative will pick your order at given date and time"/>
 
         <TextView
             android:id="@+id/track_order"

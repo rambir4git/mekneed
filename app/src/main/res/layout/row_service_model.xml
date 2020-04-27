@@ -95,7 +95,7 @@
             android:layout_marginStart="35dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/montserrat_semibold"
-            android:text="When do we require this?"
+            android:text="Product Details"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/black"
@@ -131,25 +131,11 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/yellow_line"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ll"
-            android:layout_marginBottom="@dimen/size10dp"
-            android:layout_marginStart="35dp"
-            android:drawablePadding="10dp"
-            android:fontFamily="@font/montserrat_light"
-            android:padding="5dp"
-            android:text="Any other additional problems will be reported post vehicle inspecton."
-            android:textColor="@color/orange"
-            android:textSize="8sp" />
-
         <View
             android:id="@+id/view_border"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:layout_below="@id/yellow_line"
+            android:layout_below="@id/ll"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="36dp"

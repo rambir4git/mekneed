@@ -18,7 +18,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/montserrat_bold"
             android:padding="@dimen/text_size16dp"
-            android:text="Require Pickcup"
+            android:text="Come &amp; Take away"
             android:textColor="@color/black"/>
 
         <Switch

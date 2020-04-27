@@ -149,7 +149,7 @@ public class CartDialogCheckout extends DialogFragment {
         assert getFragmentManager() != null;
         FragmentTransaction ft = Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction();
         ft.remove(this);
-        ft.commit();
+        ft.commitAllowingStateLoss();
     }
 
     private void setViews(String servingTime) {

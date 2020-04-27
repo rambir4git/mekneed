@@ -18,11 +18,8 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.myapp.mekvahan.AllBookingsDashboard.TrackOrder2;
-import com.myapp.mekvahan.DialogFeedback;
 import com.myapp.mekvahan.HomePage.ActionStatusAdapter;
-import com.myapp.mekvahan.JobCardActivity;
 import com.myapp.mekvahan.R;
 import com.myapp.mekvahan.ReasonForCancellationDialog;
 
@@ -108,28 +105,6 @@ public class RegularServiceDetails extends AppCompatActivity {
             }
         });
 
-
-        findViewById(R.id.view_job_or_send_feedback).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int serviceStatus = serviceDetails.getServiceStatus();
-
-                if(serviceStatus == 6 || serviceStatus == 7 || serviceStatus == 8 ){
-                    // Toast.makeText(RegularServiceDetails.this,"To feedback page",Toast.LENGTH_SHORT).show();
-                    DialogFeedback feedback = new DialogFeedback();
-                    Bundle bundle = new Bundle();
-                    bundle.putString("booking_id", serviceDetails.getBookingId());
-                    feedback.setArguments(bundle);
-                    feedback.show(getSupportFragmentManager(), null);
-                }
-                else{
-                    //Toast.makeText(RegularServiceDetails.this,"To Job card",Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(RegularServiceDetails.this, JobCardActivity.class));
-                }
-
-
-            }
-        });
 
     }
 
@@ -228,8 +203,6 @@ public class RegularServiceDetails extends AppCompatActivity {
 
         ImageView imageView = findViewById(R.id.image_vehicle);
 
-        Glide.with(RegularServiceDetails.this).load(serviceDetails.getVehicleImage())
-                .placeholder(R.mipmap.dummy).into(imageView);
 
         ((TextView)findViewById(R.id.service_location)).setText(serviceDetails.getPickupAddress());
         ((TextView)findViewById(R.id.booking_date_time)).setText(serviceDetails.getCreatedAt());

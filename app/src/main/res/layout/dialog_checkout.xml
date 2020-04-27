@@ -35,7 +35,7 @@
                 android:singleLine="true"
                 android:textSize="12sp"
                 android:fontFamily="@font/montserrat_semi_bold"
-                android:text="Vehicle details " />
+                android:text="Order details " />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -52,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="Maruti Suzuki"
+                    android:text="Family Farm Chana Daal"
                     android:textColor="@color/search_hint"
                     android:textSize="14sp" />
 
@@ -63,7 +63,7 @@
                     android:layout_below="@id/brand"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/montserrat_semi_bold"
-                    android:text="WagonR"
+                    android:text="Chana Dal"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -76,16 +76,17 @@
                     android:layout_below="@id/model"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/montserrat_regular"
-                    android:text="DL1R0ABC"
+                    android:text="39% off"
                     android:textSize="10sp" />
 
                 <ImageView
                     android:id="@+id/image_vehicle"
                     android:layout_width="120dp"
                     android:layout_height="100dp"
-                    android:layout_marginLeft="88dp"
+                    android:layout_marginLeft="40dp"
                     android:layout_toRightOf="@id/brand"
-                    android:src="@drawable/car_image" />
+                    android:src="@drawable/chana"
+                    android:padding="12dp"/>
 
             </RelativeLayout>
 
@@ -130,7 +131,7 @@
                         android:id="@+id/service_location"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="MekVahan #1"
+                        android:text="MekNeeds #1"
                         android:singleLine="true"
                         android:layout_marginTop="16dp"
                         android:textColor="@color/black"

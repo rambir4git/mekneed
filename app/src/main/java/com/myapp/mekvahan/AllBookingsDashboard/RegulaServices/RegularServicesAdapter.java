@@ -15,7 +15,6 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.myapp.mekvahan.AllBookingsDashboard.BookingsHomePage;
 import com.myapp.mekvahan.DialogFeedback;
 import com.myapp.mekvahan.R;
@@ -115,9 +114,6 @@ public class RegularServicesAdapter extends RecyclerView.Adapter<RegularServices
             holder.iv_paymentConTick.setImageDrawable(ContextCompat.getDrawable(mCtx,R.drawable.tick_light));
         }
 
-
-
-        Glide.with(mCtx).load(service.getVehilceLogo()).placeholder(R.drawable.suzuki).into(holder.modelLogo);
 
         holder.btn_connect.setOnClickListener(new View.OnClickListener() {
             @Override

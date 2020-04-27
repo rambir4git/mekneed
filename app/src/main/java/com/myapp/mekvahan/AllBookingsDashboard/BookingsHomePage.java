@@ -6,38 +6,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
 import com.google.android.material.tabs.TabLayout;
 import com.myapp.mekvahan.AllBookingsDashboard.RegulaServices.FragRegularServices;
 import com.myapp.mekvahan.AllBookingsDashboard.RegulaServices.RegularServiceModel;
-import com.myapp.mekvahan.CommonFiles.AppConstants;
-import com.myapp.mekvahan.CommonFiles.CommonVariablesFunctions;
-import com.myapp.mekvahan.CommonFiles.MySingleton;
 import com.myapp.mekvahan.R;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import static com.myapp.mekvahan.CommonFiles.CommonVariablesFunctions.BASE;
-import static com.myapp.mekvahan.CommonFiles.CommonVariablesFunctions.NO_OF_RETRY;
-import static com.myapp.mekvahan.CommonFiles.CommonVariablesFunctions.RETRY_SECONDS;
 
 public class BookingsHomePage extends AppCompatActivity {
 
@@ -48,19 +28,21 @@ public class BookingsHomePage extends AppCompatActivity {
     private List<String> titles;
 
     private int[] tabIcons = {
-            R.drawable.gs_tab,
-            R.drawable.repairing_tab,
-            R.drawable.wc_tab,
-            R.drawable.dp_tab,
-
+            R.drawable.ic_asset_7,
+            R.drawable.ic_asset_9,
+            R.drawable.ic_asset_12,
+            R.drawable.ic_asset_14,
+            R.drawable.ic_asset_16,
+            R.drawable.ic_asset_18
     };
 
     private int[] tabIconsselect = {
-            R.drawable.gs_tabselect,
-            R.drawable.repairingselect_tab,
-            R.drawable.wc_tabselect,
-            R.drawable.dp_tabselect,
-
+            R.drawable.ic_asset_7,
+            R.drawable.ic_asset_9,
+            R.drawable.ic_asset_12,
+            R.drawable.ic_asset_14,
+            R.drawable.ic_asset_16,
+            R.drawable.ic_asset_18
     };
 
     private int selected_position;
@@ -87,14 +69,19 @@ public class BookingsHomePage extends AppCompatActivity {
         titles = new ArrayList<>();
 
         //titles.add("All Services");
-        titles.add("Regular Services");
-        titles.add("Sos Services");
-        titles.add("OutStation Cabs");
+        titles.add("Grocery & Staples");
+        titles.add("Fruit & Vegetables");
+        titles.add("Household Items");
+        titles.add("Dairy Essentials");
+        titles.add("Medicines");
+        titles.add("Others");
 
         mFragmentList = new ArrayList<>();
 
         //mFragmentList.add(new FragAllServices());
         mFragmentList.add(new FragRegularServices());
+        mFragmentList.add(new FragOutStationCabs());
+        mFragmentList.add(new FragOutStationCabs());
         mFragmentList.add(new FragOutStationCabs());
         mFragmentList.add(new FragOutStationCabs());
 
@@ -133,236 +120,33 @@ public class BookingsHomePage extends AppCompatActivity {
     // type -regular, sos, outstation
 
     private void fetchAllBookingsAndSetViewPager() {
+        String action = "(abcd,zyz)";
+        List<String> actionArray = new ArrayList<>();
+        actionArray.add(action);
 
-        Log.e(TAG, "called : fetchAllBookings");
-        mProgressDialog.show();
 
-        String iou = BASE + "getBookings";
+        mRegularServiceList.add(new RegularServiceModel("1584181143", "123", "pickupAddress", "28.653980184766546", "36.12154154", "dropAddress", "2020-04-15",
+                "10:00:00","2020-04-15 10:00:00","2020-04-15 13:00:00","buy only fresh items", "9812345678",1,1,"MekGroceries",
+                "Anti conrona","Healthy Groceries", "","", "Stay home and eat fresh",700.00,0.00,0.00,"2020-04-14 22:49:05.000000",
+                "Groceries and Staples","1100",actionArray));
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, iou,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        mProgressDialog.dismiss();
+        mRegularServiceList.add(new RegularServiceModel("1584184511", "1245", "pickupAddress", "28.653980184766546", "36.12154154", "dropAddress", "2020-04-15",
+                "10:00:00","2020-04-15 10:00:00","2020-04-15 13:00:00","buy only fresh items", "9812345678",1,1,"MekGroceries",
+                "Anti conrona","Healthy Groceries", "","", "Stay home and eat fresh",7845.00,0.00,0.00,"2020-04-14 22:49:05.000000",
+                "Groceries and Staples","1100",actionArray));
 
-                        if(mRegularServiceList.size()>0)
-                            mRegularServiceList.clear();
+        mRegularServiceList.add(new RegularServiceModel("1584187605", "123", "pickupAddress", "28.653980184766546", "36.12154154", "dropAddress", "2020-04-15",
+                "10:00:00","2020-04-15 10:00:00","2020-04-15 13:00:00","buy only fresh items", "9812345678",1,1,"MekGroceries",
+                "Anti conrona","Healthy Groceries", "","", "Stay home and eat fresh",12.00,0.00,0.00,"2020-04-14 22:49:05.000000",
+                "Groceries and Staples","1100",actionArray));
 
+        mRegularServiceList.add(new RegularServiceModel("1584181143", "123", "pickupAddress", "28.653980184766546", "36.12154154", "dropAddress", "2020-04-15",
+                "10:00:00","2020-04-15 10:00:00","2020-04-15 13:00:00","buy only fresh items", "9812345678",1,1,"MekGroceries",
+                "Anti conrona","Healthy Groceries", "","", "Stay home and eat fresh",963.00,0.00,0.00,"2020-04-14 22:49:05.000000",
+                "Groceries and Staples","1100",actionArray));
 
-                        Log.e(TAG, response);
+     setViewPager();
 
-
-                        try {
-
-                            JSONArray jsonArray = new JSONObject(response).getJSONArray("data");
-
-                            if (jsonArray.length() == 0) {
-                                Toast.makeText(BookingsHomePage.this, "No bookings Available", Toast.LENGTH_SHORT).show();
-                                //launching empty
-                                setViewPager();
-                                return;
-                            }
-
-
-
-                            for (int i = 0; i < jsonArray.length(); i++) {
-
-                                JSONObject jsonObject = jsonArray.getJSONObject(i);
-
-                                String type      = jsonObject.getString("type");
-                                String bookingId = jsonObject.getString("booking_id");
-
-                                if (type.equals("regular")) {
-
-                                    JSONArray array = jsonObject.getJSONArray("regular_service");
-
-                                    JSONObject rs = array.getJSONObject(0);
-
-                                    //
-                                    String id = rs.getString("id");
-
-                                    String pickupAddress  = rs.getJSONObject("pickup_address_id").getJSONObject("data").getString("address");
-                                    String lat = rs.getJSONObject("pickup_address_id").getJSONObject("data").getString("lat");
-                                    String lng = rs.getJSONObject("pickup_address_id").getJSONObject("data").getString("long");
-
-                                    String dropAddress    = rs.getJSONObject("drop_address_id").getJSONObject("data").getString("address");
-
-                                    String serviceDate    = rs.getString("service_date");
-                                    String serviceTime    = rs.getString("service_time").substring(0,5);
-                                    String pickupDateTime = rs.getString("pickup_date_time").substring(0,16);
-
-
-                                    String dropDateTime   = rs.getString("drop_date_time");
-
-                                    String details        = rs.getString("details");
-                                    String customerMobile = rs.getString("mobile");
-
-                                    //String paymentDone    = rs.getString("payment");   //null if not done
-
-                                    String stringServiceStatus = rs.getString("status");
-
-                                    int serviceStatus = getIntServiceStatus(stringServiceStatus);
-
-                                    if (serviceStatus == 0) {
-                                        Toast.makeText(BookingsHomePage.this, "No such " + stringServiceStatus + " status", Toast.LENGTH_SHORT).show();
-                                        return;
-                                    }
-
-
-                                    JSONObject vehicleObject = rs.getJSONObject("Vehicle Details").getJSONObject("data");
-
-                                    String vehicleModel     = vehicleObject.getJSONObject("model_id").getString("name");
-                                    String vehicleType      = vehicleObject.getJSONObject("model_id").getString("vehicle_type");
-                                    String vehilceCompany   = vehicleObject.getJSONObject("model_id").getJSONArray("company_id")
-                                                                .getJSONObject(0).getString("name");
-                                    String vehicleImage     = vehicleObject.getJSONObject("model_id").getJSONArray("images").getString(1);
-                                    String vehicleLogo      = vehicleObject.getJSONObject("model_id").getJSONArray("logo").getString(1);
-                                    String licencePlate     = vehicleObject.getString("license_plate");
-
-                                    String cod              = rs.getString("cod");
-                                    String wallet           = rs.getString("wallet");
-                                    String online           = rs.getString("online");
-
-
-                                    if(wallet.equals("null")) wallet = "0";
-
-                                    int isPymentDone = 0;
-
-
-                                    if (Integer.parseInt(wallet) != 0 || Integer.parseInt(online) != 0) {
-
-                                        isPymentDone = 1;
-                                    }
-
-                                    if(Integer.parseInt(cod) == 0)
-                                        isPymentDone = 1;
-
-                                    Double subTotal         = Double.valueOf(Integer.parseInt(cod)+Integer.parseInt(online)+Integer.parseInt(wallet));
-
-                                    Double additionalCharges= 0d;
-                                    Double gst              = 0d;
-
-                                    String createdAtIncorrectUTC = rs.getJSONObject("created_at").getString("date");
-                                    String createdAt = CommonVariablesFunctions.convertToLocalTimeStamp(createdAtIncorrectUTC).substring(0, 16);
-
-                                    //Service details bacha hua hai
-                                    JSONObject serviceDetails = rs.getJSONObject("service_details");
-                                    String serviceName        = serviceDetails.getString("service_name");
-
-                                    JSONObject serviceStatusObject = rs.getJSONObject("service_status");
-
-                                    List<String> actionArray = new ArrayList<>();
-
-                                    String actions;
-
-//                                    String temp = serviceStatusObject.getString("action1").replaceAll("[^a-zA-Z0-9(), ]+", "");;
-//                                    Log.e(TAG,"temp="+temp);
-
-                                    actions        = serviceStatusObject.getString("action1").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action2").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action3").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action4").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action5").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action6").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action7").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action8").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action9").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action10").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action11").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action12").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action13").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action14").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                    actions       += "!" + serviceStatusObject.getString("action15").replaceAll("[^a-zA-Z0-9(), ]+", "");
-
-                                    actionArray.add(actions);
-
-
-                                    String pin = rs.getString("otp");
-
-                                    //If there is more than 1 regular services
-                                    if(jsonArray.length()>1){
-
-                                        for(int j=1;j<array.length();j++){
-
-                                            JSONObject rsExtra = array.getJSONObject(j);
-
-                                            id +=  "!" + rsExtra.getString("id");
-//
-//                                            subTotal           += rsExtra.getJSONObject("quotation").getDouble("subtotal");
-//                                            additionalCharges  += rsExtra.getJSONObject("quotation").getDouble("additional");
-//                                            gst                += rsExtra.getJSONObject("quotation").getDouble("gst");
-
-                                            serviceDetails = rsExtra.getJSONObject("service_details");
-                                            serviceName    += "!" + serviceDetails.getString("service_name");
-
-                                            serviceStatusObject = rsExtra.getJSONObject("service_status");
-
-                                            actions        = serviceStatusObject.getString("action1").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action2").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action3").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action4").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action5").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action6").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action7").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action8").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action9").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action10").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action11").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action12").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action13").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action14").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                            actions       += "!" + serviceStatusObject.getString("action15").replaceAll("[^a-zA-Z0-9(), ]+", "");
-
-                                            actionArray.add(actions);
-                                        }
-
-                                    }
-
-
-                                    mRegularServiceList.add(new RegularServiceModel(bookingId, id, pickupAddress, lat, lng, dropAddress, serviceDate,
-                                            serviceTime,pickupDateTime,dropDateTime,details, customerMobile,isPymentDone,serviceStatus,vehicleModel,
-                                            vehicleType,vehilceCompany, vehicleImage,vehicleLogo, licencePlate,subTotal,additionalCharges,gst,createdAt,
-                                            serviceName,pin,actionArray));
-
-                                }
-
-                            }
-
-                            setViewPager();
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            Log.e(TAG, e.toString());
-                            Toast.makeText(BookingsHomePage.this, e.toString(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                mProgressDialog.dismiss();
-                Log.e(TAG, error.toString());
-                Toast.makeText(BookingsHomePage.this, error.toString(), Toast.LENGTH_SHORT).show();
-            }
-        }) {
-
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                Map<String, String> header = new HashMap<>();
-
-
-                header.put("Accept", "application/json");
-                header.put("Authorization", AppConstants.TOKEN);
-                return header;
-            }
-
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                return super.getParams();
-            }
-        };
-        stringRequest.setRetryPolicy(new DefaultRetryPolicy((RETRY_SECONDS),
-                NO_OF_RETRY, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        MySingleton.getInstance(BookingsHomePage.this).addToRequestQueue(stringRequest);
     }
 
 

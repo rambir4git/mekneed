@@ -294,18 +294,19 @@ public class TrackOrder2 extends AppCompatActivity implements OnMapReadyCallback
 
                                     setProgressBarAnimation(status);
                                     //set which lat long to show
+                                    LatLng latLng = new LatLng(28.653980184766546,28.653980184766546);
                                     switch (status) {
                                         case "booked":
                                         case "selected":
-                                            setMap(status, new LatLng(Double.parseDouble(pickLat), Double.parseDouble(pickLong)));
+                                            setMap(status, latLng);
                                             break;
                                         case "upcoming": //delivery lat long
                                         case "ongoing":
-                                            setMap(status, new LatLng(Double.parseDouble(deliveryLat), Double.parseDouble(deliveryLong)));
+                                            setMap(status, latLng);
                                             break;
                                         case "pending": //partner lat long
                                         case "complete":
-                                            setMap(status, new LatLng(Double.parseDouble(partnerLat), Double.parseDouble(partnerLong)));
+                                            setMap(status, latLng);
                                             break;
                                         case "service_complete": //drop lat long
 
@@ -620,8 +621,6 @@ public class TrackOrder2 extends AppCompatActivity implements OnMapReadyCallback
         }
 
     }
-
-
 
 
 }

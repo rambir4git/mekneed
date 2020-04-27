@@ -42,11 +42,13 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_width="130dp"
+            android:layout_width="300dp"
             android:layout_height="130dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="@dimen/text_size40dp"
-            android:src="@mipmap/covid" />
+            android:layout_gravity="start"
+            android:scaleType="fitStart"
+            android:src="@mipmap/logo2" />
 
 
     </FrameLayout>

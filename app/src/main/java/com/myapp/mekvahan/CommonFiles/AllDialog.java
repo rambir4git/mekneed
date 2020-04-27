@@ -117,6 +117,7 @@ public class AllDialog {
 
     private void clearStackAndTrackOrder(String bookId, String date, String lat, String lng, String type) {
 
+
         Intent i = new Intent(mCtx, TrackOrder2.class);
 
 
@@ -128,8 +129,6 @@ public class AllDialog {
         i.putExtra("lat", lat);
         i.putExtra("lng", lng);
 
-
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         mCtx.startActivity(i);
     }

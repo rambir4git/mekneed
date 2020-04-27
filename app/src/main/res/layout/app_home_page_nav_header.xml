@@ -32,20 +32,20 @@
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
-            android:textSize="15sp"
-            android:fontFamily="@font/montserrat_semi_bold"
-            android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:text="Manilal Kasera"/>
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Helpline"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/mobile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/name"
             android:layout_marginTop="4dp"
-            android:text="7907977701"
             android:fontFamily="@font/gotham_book_regular"
-            android:layout_below="@id/name"/>
+            android:text="7838878899" />
 
     </LinearLayout>
 

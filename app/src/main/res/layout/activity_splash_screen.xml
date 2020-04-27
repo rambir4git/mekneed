@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_height="120dp"
-        android:src="@mipmap/covid"
+        android:src="@mipmap/logo1"
         android:contentDescription="app logo" />
 
 

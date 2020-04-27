@@ -88,7 +88,7 @@
                             android:layout_height="20dp"
                             android:layout_marginRight="8dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/suzuki" />
+                            android:src="@drawable/ic_asset_7"/>
 
                         <TextView
                             android:id="@+id/model"
@@ -98,7 +98,7 @@
                             android:layout_gravity="center"
                             android:layout_toRightOf="@id/model_logo"
                             android:fontFamily="@font/montserrat_semi_bold"
-                            android:text="Wagonar R"
+                            android:text="MekGroceries"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
@@ -275,8 +275,8 @@
             android:layout_height="56dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/circle_border"
-            android:padding="16dp"
-            android:src="@drawable/u1" />
+            android:padding="10dp"
+            android:src="@drawable/ic_asset_6" />
 
 
     </FrameLayout>

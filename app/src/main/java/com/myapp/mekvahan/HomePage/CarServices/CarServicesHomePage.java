@@ -13,7 +13,6 @@ import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -26,19 +25,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.myapp.mekvahan.AllBookingsDashboard.BookingsHomePage;
 import com.myapp.mekvahan.Cart.CartHomePage;
 import com.myapp.mekvahan.Cart.CartTable;
-import com.myapp.mekvahan.CommonFiles.AppConstants;
-import com.myapp.mekvahan.CommonFiles.MySingleton;
 import com.myapp.mekvahan.HomePage.ServiceModel;
 import com.myapp.mekvahan.MenuModel;
 import com.myapp.mekvahan.R;
@@ -46,18 +37,9 @@ import com.myapp.mekvahan.Rooms.CartDao;
 import com.myapp.mekvahan.Rooms.MekVahanDatabase;
 import com.myapp.mekvahan.SignupAndLogin.Login.LoginHomePage;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import static com.myapp.mekvahan.CommonFiles.CommonVariablesFunctions.BASE;
-import static com.myapp.mekvahan.CommonFiles.CommonVariablesFunctions.NO_OF_RETRY;
-import static com.myapp.mekvahan.CommonFiles.CommonVariablesFunctions.RETRY_SECONDS;
 
 public class CarServicesHomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -81,21 +63,21 @@ public class CarServicesHomePage extends AppCompatActivity implements Navigation
     HashMap<String, String> mUserInfo;
 
     private int[] tabIcons = {
-            R.drawable.gs_tab,
-            R.drawable.repairing_tab,
-            R.drawable.wc_tab,
-            R.drawable.dp_tab,
-            R.drawable.cc_tab,
-            R.drawable.others_tab
+            R.drawable.ic_asset_7,
+            R.drawable.ic_asset_9,
+            R.drawable.ic_asset_12,
+            R.drawable.ic_asset_14,
+            R.drawable.ic_asset_16,
+            R.drawable.ic_asset_18
     };
 
     private int[] tabIconsselect = {
-            R.drawable.gs_tabselect,
-            R.drawable.repairingselect_tab,
-            R.drawable.wc_tabselect,
-            R.drawable.dp_tabselect,
-            R.drawable.cc_tabselect,
-            R.drawable.others_tabselect
+            R.drawable.ic_asset_7,
+            R.drawable.ic_asset_9,
+            R.drawable.ic_asset_12,
+            R.drawable.ic_asset_14,
+            R.drawable.ic_asset_16,
+            R.drawable.ic_asset_18
     };
 
     private int selected_position;
@@ -123,11 +105,11 @@ public class CarServicesHomePage extends AppCompatActivity implements Navigation
 
         titles = new ArrayList<>();
 
-        titles.add("General Service");
-        titles.add("Repairing");
-        titles.add("Wheel Care");
-        titles.add("Denting Painting");
-        titles.add("Car Care");
+        titles.add("Grocery & Staples");
+        titles.add("Fruit & Vegetables");
+        titles.add("Household Items");
+        titles.add("Dairy Essentials");
+        titles.add("Medicines");
         titles.add("Others");
 
         mFragmentList = new ArrayList<>();
@@ -220,149 +202,104 @@ public class CarServicesHomePage extends AppCompatActivity implements Navigation
 
     private void fetchCarAllServices(final List<CartTable> cartTableList) {
 
-        Log.e(TAG,"called : fetchCarGeneralServices");
-        mProgressBar.setVisibility(View.VISIBLE);
+        mCarAllServiceList.add(new ServiceModel(1,"grocery_staples","Key Feature", "","Family Farm Chana Dal","chana daal",
+                "Pure and natural premium-quality graded grains BREAKNEWLINE" +
+                        "Enriched with the goodness of protein and essential nutrients BREAKNEWLINE" +
+                        "Easily digestible and extremely healthy for diabetics BREAKNEWLINE" +
+                        "Rich source of dietary fibre BREAKNEWLINE" +
+                        "Ideal to prepare a variety of cuisines like salads, curries, soups, dal preparations, sweets and also few rice dishes",
+                "Come & Take away eligible BREAKNEWLINE" +
+                "Free delivery eligible BREAKNEWLINE" +
+                "Contact free delivery eligible BREAKNEWLINE" +
+                "Low cost guarantee BREAKNEWLINE" +
+                "20 points inspection BREAKNEWLINE"+
+                "2 days return eligible",
+                "Pure and natural premium-quality graded grains BREAKNEWLINE" +
+                "Enriched with the goodness of protein and essential nutrients BREAKNEWLINE" +
+                "Easily digestible and extremely healthy for diabetics BREAKNEWLINE" +
+                "Rich source of dietary fibre BREAKNEWLINE" +
+                "Ideal to prepare a variety of cuisines like salads, curries, soups, dal preparations, sweets and also few rice dishes","Carbs,47g","Dietary Fiber,11g","Fat,3g","Protein,25g","Sodium,35mg","Cholesterol,0mg","Calcium,1%","Iron,10%","Vitamin A,0%","Vitamin C,0%","","","","","",
+                "72","72","0","0","72",1));
 
-        String iou = BASE + "regularCarService";
+        mCarAllServiceList.add(new ServiceModel(2,"grocery_staples","Key Feature", "","Chakki Atta 10 KG","atta",
+                "Picked from the finest wheat fields BREAKNEWLINE" +
+                        "100% whole wheat Atta BREAKNEWLINE" +
+                        "Get the super quality taste BREAKNEWLINE" +
+                        "Imparts a good aroma and a fluffy lookBREAKNEWLINE" +
+                        "Also helps prevent weight gain",
+                "Come & Take away eligible BREAKNEWLINE" +
+                        "Free delivery eligible BREAKNEWLINE" +
+                        "Contact free delivery eligible BREAKNEWLINE" +
+                        "Low cost guarantee BREAKNEWLINE" +
+                        "20 points inspection BREAKNEWLINE"+
+                        "2 days return eligible",
+                "Pure and natural premium-quality graded grains BREAKNEWLINE" +
+                        "Enriched with the goodness of protein and essential nutrients BREAKNEWLINE" +
+                        "Easily digestible and extremely healthy for diabetics BREAKNEWLINE" +
+                        "Rich source of dietary fibre BREAKNEWLINE" +
+                        "Ideal to prepare a variety of cuisines like salads, curries, soups, dal preparations, sweets and also few rice dishes","Carbs,47g","Dietary Fiber,11g","Fat,3g","Protein,25g","Sodium,35mg","Cholesterol,0mg","Calcium,1%","Iron,10%","Vitamin A,0%","Vitamin C,0%","","","","","",
+                "308","308","0","0","308",1));
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, iou,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        mProgressBar.setVisibility(View.GONE);
+        mCarAllServiceList.add(new ServiceModel(3,"grocery_staples","Key Feature", "","Fortune Premium Kachi Ghani Pure Mustard Oil (Bottle)","mustard oil",
+                "Made from finest Mustard seeds BREAKNEWLINE" +
+                        "Offers strong aroma and pungency that will spice up your cooking BREAKNEWLINE" +
+                        "Acts as a digestive aid in neutralising toxins BREAKNEWLINE" +
+                        "Adds an authentic taste and flavour to curries and vegetables BREAKNEWLINE",
+                "Come & Take away eligible BREAKNEWLINE" +
+                        "Free delivery eligible BREAKNEWLINE" +
+                        "Contact free delivery eligible BREAKNEWLINE" +
+                        "Low cost guarantee BREAKNEWLINE" +
+                        "20 points inspection BREAKNEWLINE"+
+                        "2 days return eligible",
+                "Pure and natural premium-quality graded grains BREAKNEWLINE" +
+                        "Enriched with the goodness of protein and essential nutrients BREAKNEWLINE" +
+                        "Easily digestible and extremely healthy for diabetics BREAKNEWLINE" +
+                        "Rich source of dietary fibre BREAKNEWLINE" +
+                        "Ideal to prepare a variety of cuisines like salads, curries, soups, dal preparations, sweets and also few rice dishes","Carbs,47g","Dietary Fiber,11g","Fat,3g","Protein,25g","Sodium,35mg","Cholesterol,0mg","Calcium,1%","Iron,10%","Vitamin A,0%","Vitamin C,0%","","","","","",
+                "115","115","0","0","115",1));
 
-                        Log.e(TAG,response);
-
-                        try {
-
-                            JSONArray jsonArray = new JSONObject(response).getJSONArray("data");
-
-                            for(int i=0;i<jsonArray.length();i++){
-
-                                JSONObject obj = jsonArray.getJSONObject(i);
-
-                                int id = obj.getInt("id");
-
-                                String priorLine1   = obj.getString("prior_line1");
-                                String category     = obj.getString("category");
-                                String priorLine2   = obj.getString("prior_line2");
-                                String serviceName  = obj.getString("service_name");
-                                String serviceId    = obj.getString("service_id");
-                                String description  = obj.getString("description");
-                                String what         = obj.getString("what");
-                                String when         = obj.getString("when");
-
-                                //Removing everything except alphabets, numbers and comma
-
-                                String action1 = obj.getString("action1").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action2 = obj.getString("action2").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action3 = obj.getString("action3").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action4 = obj.getString("action4").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action5 = obj.getString("action5").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action6 = obj.getString("action6").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action7 = obj.getString("action7").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action8 = obj.getString("action8").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action9 = obj.getString("action9").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action10 = obj.getString("action10").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action11 = obj.getString("action11").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action12 = obj.getString("action12").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action13 = obj.getString("action13").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action14 = obj.getString("action14").replaceAll("[^a-zA-Z0-9(), ]+", "");
-                                String action15 = obj.getString("action15").replaceAll("[^a-zA-Z0-9(), ]+", "");
-
-
-                                String total       = obj.getString("TotalCharge");
-                                String subTotal    = obj.getString("SubTotalCharge");
-                                String addiCharges = obj.getString("AddtionalCharge");
-                                String gst         = obj.getString("GstCharge");
-
-                                //Striked out amount is greater by 20%
-                                //String strikedOutAmount = String.valueOf(Integer.parseInt(total) + (int)(Integer.parseInt(total)*.2));
-
-                                String strikedOutAmount = "0";
-
-                                String catagory  = obj.getString("category");
-
-
-                                int flag;
-
-                                if(catagory.equals("general_services"))
-                                    flag = 1;
-                                else if (catagory.equals("repairing"))
-                                    flag = 2;
-                                else if (catagory.equals("wheel_care"))
-                                    flag = 3;
-                                else if (catagory.equals("denting_painting"))
-                                    flag = 4;
-                                else if (catagory.equals("car_care"))
-                                    flag = 5;
-                                else
-                                    flag = 6;
-
-                                mCarAllServiceList.add(new ServiceModel(id,category,priorLine1, priorLine2,serviceName,serviceId,
-                                        description, what, when,action1,action2,action3,action4,action5,action6,action7,
-                                        action8,action9,action10,action11,action12,action13,action14,action15,
-                                        total,subTotal,addiCharges,gst,strikedOutAmount,flag));
-
-                            }
-
-                            if(cartTableList.size() != 0)
-                                setToCartCard(cartTableList);
-
-                            //Checking if service is added to cart or not
-
-                            for(int i=0;i<cartTableList.size();i++)
-                            {
-                                CartTable cartItem =  cartTableList.get(i);
-
-                                for(int j=0;j<mCarAllServiceList.size();j++){
-                                    ServiceModel serviceModel = mCarAllServiceList.get(j);
-
-                                    if(cartItem.getServiceId() == serviceModel.getId())
-                                        serviceModel.setAddedToCart(true);
-                                }
+        mCarAllServiceList.add(new ServiceModel(4,"grocery_staples","Key Feature", "","Family Farm Broken Mogra Basmati","rice",
+                "Carefully selected for the highest quality BREAKNEWLINE" +
+                        "Rich aroma and taste BREAKNEWLINE" +
+                        "Widely used in cooking for an authentic Indian taste BREAKNEWLINE" +
+                        "A perfect fit for everyday consumption BREAKNEWLINE" ,
+                "Come & Take away eligible BREAKNEWLINE" +
+                        "Free delivery eligible BREAKNEWLINE" +
+                        "Contact free delivery eligible BREAKNEWLINE" +
+                        "Low cost guarantee BREAKNEWLINE" +
+                        "20 points inspection BREAKNEWLINE"+
+                        "2 days return eligible",
+                "Pure and natural premium-quality graded grains BREAKNEWLINE" +
+                        "Enriched with the goodness of protein and essential nutrients BREAKNEWLINE" +
+                        "Easily digestible and extremely healthy for diabetics BREAKNEWLINE" +
+                        "Rich source of dietary fibre BREAKNEWLINE" +
+                        "Ideal to prepare a variety of cuisines like salads, curries, soups, dal preparations, sweets and also few rice dishes","Carbs,47g","Dietary Fiber,11g","Fat,3g","Protein,25g","Sodium,35mg","Cholesterol,0mg","Calcium,1%","Iron,10%","Vitamin A,0%","Vitamin C,0%","","","","","",
+                "680","680","0","0","680",1));
 
 
-                            }
 
-                            setViewPager();
 
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            Log.e(TAG,e.toString());
-                            Toast.makeText(CarServicesHomePage.this, e.toString(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                mProgressBar.setVisibility(View.GONE);
-                Log.e(TAG,error.toString());
+        if(cartTableList.size() != 0)
+            setToCartCard(cartTableList);
 
-                if (error instanceof AuthFailureError) {
+        //Checking if service is added to cart or not
 
-                    Toast.makeText(CarServicesHomePage.this, "token problem", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }){
+        for(int i=0;i<cartTableList.size();i++)
+        {
+            CartTable cartItem =  cartTableList.get(i);
 
-            @Override
-            public Map<String, String> getHeaders() {
-                Map<String, String> header = new HashMap<>();
+            for(int j=0;j<mCarAllServiceList.size();j++){
+                ServiceModel serviceModel = mCarAllServiceList.get(j);
 
-                header.put("Accept","application/json");
-                header.put("Authorization", AppConstants.TOKEN);
-                return header;
+                if(cartItem.getServiceId() == serviceModel.getId())
+                    serviceModel.setAddedToCart(true);
             }
 
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                return super.getParams();
-            }
-        };
-        stringRequest.setRetryPolicy(new DefaultRetryPolicy((RETRY_SECONDS),
-                NO_OF_RETRY, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        MySingleton.getInstance(CarServicesHomePage.this).addToRequestQueue(stringRequest);
+
+        }
+
+        setViewPager();
+
     }
 
     public List<ServiceModel>  getCarService(int flag){

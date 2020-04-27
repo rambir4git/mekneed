@@ -52,7 +52,7 @@
                             android:drawableRight="@drawable/search_icon"
                             android:drawablePadding="10dp"
                             android:fontFamily="@font/gotham_regular"
-                            android:hint="@string/app_name"
+                            android:hint="MekNeeds"
                             android:padding="10dp"
                             android:clickable="false"
                             android:paddingStart="@dimen/size10dp"
@@ -85,7 +85,7 @@
                 android:id="@+id/tabs_car_services"
                 style="@style/MyCustomTabLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
                 android:layout_margin="4dp"
                 app:tabBackground="@drawable/tab_color_selector"
                 app:tabIndicatorColor="@null"
@@ -149,17 +149,7 @@
                     android:textSize="20dp"/>
 
 
-
-
-
-
-
-
             </RelativeLayout>
-
-
-
-
 
 
         </LinearLayout>

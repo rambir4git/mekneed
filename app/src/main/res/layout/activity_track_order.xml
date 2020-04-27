@@ -70,16 +70,35 @@
                         android:layout_margin="16dp"
                         android:src="@drawable/delivery_man" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_margin="16dp"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="Mekvahan"
-                        android:gravity="top"
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
+                        android:orientation="vertical"
+                        android:layout_margin="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="Mekneeds"
+                            android:gravity="top"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_below="@id/ll_partner"
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:paddingTop="8dp"
+                            android:text="Body Temp 37C"
+                            android:textColor="@color/offwhite"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
                 <RatingBar
@@ -94,6 +113,7 @@
                     android:theme="@style/RatingBar"
                     android:transformPivotX="152dp"
                     android:transformPivotY="-80dp" />
+
 
                 <View
                     android:layout_below="@id/ll_partner"
@@ -185,7 +205,7 @@
                 android:layout_margin="16dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat_medium"
-                android:text="Require Pickup"
+                android:text="Come &amp; Take away"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -389,7 +409,7 @@
                         android:gravity="start"
                         android:layout_marginLeft="80dp"
                         android:fontFamily="@font/montserrat_semibold"
-                        android:text="We are on the way to pickup your vehicle"
+                        android:text="We are on the way to pickup your order"
                         android:textColor="@color/black"
                         android:textSize="12sp" />
 
@@ -450,7 +470,7 @@
                         android:gravity="start"
                         android:layout_marginLeft="80dp"
                         android:fontFamily="@font/montserrat_semibold"
-                        android:text="Vehicle picked up"
+                        android:text="Order picked up"
                         android:textColor="@color/black"
                         android:textSize="12sp" />
 
@@ -510,7 +530,7 @@
                         android:gravity="start"
                         android:layout_marginLeft="80dp"
                         android:fontFamily="@font/montserrat_semibold"
-                        android:text="Vehicle servicing in progress"
+                        android:text="Out for delivery"
                         android:textColor="@color/black"
                         android:textSize="12sp" />
 
@@ -570,7 +590,7 @@
                         android:gravity="start"
                         android:layout_marginLeft="80dp"
                         android:fontFamily="@font/montserrat_semibold"
-                        android:text="Servicing of your Vehicle is complete"
+                        android:text="Contactless delivery in progress"
 
                         android:textColor="@color/black"
                         android:textSize="12sp" />
@@ -630,7 +650,7 @@
                         android:gravity="start"
                         android:layout_marginLeft="80dp"
                         android:fontFamily="@font/montserrat_semibold"
-                        android:text="Vehicle dropped"
+                        android:text="Order delivered"
 
                         android:textColor="@color/black"
                         android:textSize="12sp" />

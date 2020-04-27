@@ -17,7 +17,7 @@
         android:singleLine="true"
         android:textSize="13sp"
         android:fontFamily="@font/montserrat_semi_bold"
-        android:text="Vehicle details " />
+        android:text="Order details " />
 
 
     <RelativeLayout
@@ -67,7 +67,7 @@
             android:layout_height="80dp"
             android:layout_marginLeft="66dp"
             android:layout_toRightOf="@id/model"
-            android:src="@mipmap/dummy" />
+            android:src="@drawable/ic_asset_8" />
 
     </RelativeLayout>
 

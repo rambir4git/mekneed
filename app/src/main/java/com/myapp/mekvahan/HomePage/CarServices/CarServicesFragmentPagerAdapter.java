@@ -31,11 +31,11 @@ public class CarServicesFragmentPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
 
         switch (position){
-            case 0: return "General";
-            case 1: return "Repairing";
-            case 2: return "Wheel Care";
-            case 3: return "Denting Painting";
-            case 4: return "Car Care";
+            case 0: return "Grocery & Staples";
+            case 1: return "Fruit & Vegetables";
+            case 2: return "Household Items";
+            case 3: return "Dairy Essentials";
+            case 4: return "Medicines";
             case 5: return "Other";
         }
 

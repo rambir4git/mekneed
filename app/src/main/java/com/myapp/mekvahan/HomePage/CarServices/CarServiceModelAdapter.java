@@ -216,15 +216,14 @@ public class CarServiceModelAdapter extends RecyclerView.Adapter<CarServiceModel
                 SharedPreferences sharedPreferences= PreferenceManager.getDefaultSharedPreferences(v.getContext());
                 SharedPreferences.Editor editor= sharedPreferences.edit();
                 if(service.isAddedToCart()){
-
-
                     new RemoveFromCart(MekVahanDatabase.getInstance(mCtx),service, holder).execute(service);
                     resetToDefault(service, holder.getAdapterPosition());
                     return;
                 }
 
+                new AddToCart(MekVahanDatabase.getInstance(mCtx), service, holder).execute(service);
 
-
+                /*
                 if(service.getCategory().contains("general_services")){
                     serviceStatus=sharedPreferences.getBoolean("key", false);
                     Log.e("servicestatus", String.valueOf(serviceStatus));
@@ -287,7 +286,7 @@ public class CarServiceModelAdapter extends RecyclerView.Adapter<CarServiceModel
                     new AddToCart(MekVahanDatabase.getInstance(mCtx), service, holder).execute(service);
                 }else if(service.getCategory().contains("others")){
                     new AddToCart(MekVahanDatabase.getInstance(mCtx), service, holder).execute(service);
-                }
+                }*/
             }
         });
 

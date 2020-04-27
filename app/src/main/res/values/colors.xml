@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#2196F3</color>
-    <color name="colorPrimaryDark">#42A5F5</color>
+    <color name="colorPrimary">#da1f26</color>
+    <color name="colorPrimaryDark">#B71C1C</color>
     <color name="colorAccent">#A5A5A5</color>
     <color name="colorPrimarylight">#f2e4ed</color>
 
@@ -12,7 +12,7 @@
 
     <!-- Chart Colors -->
     <color name="chart_deep_red">@color/colorPrimary</color>
-    <color name="chart_light_red">#64B5F6</color>
+    <color name="chart_light_red">#ff3b3b</color>
     <color name="green">#16A007</color>
     <color name="orange">#FFB133</color>
     <color name="grey">#f4f4f4</color>

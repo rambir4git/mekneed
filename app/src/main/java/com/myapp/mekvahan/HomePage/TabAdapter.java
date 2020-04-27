@@ -53,8 +53,7 @@ public class TabAdapter extends RecyclerView.Adapter<TabAdapter.TabViewHolder> {
 
                 int tabId   = tab.getId();
 
-                Intent i;
-                    i = new Intent(mCtx, CarServicesHomePage.class);
+                Intent i = new Intent(mCtx, CarServicesHomePage.class);
 
                 i.putExtra("viewpagerId",tabId);
                 mCtx.startActivity(i);

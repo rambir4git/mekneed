@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/car_image" />
+            android:src="@drawable/ic_asset_6" />
 
         <ProgressBar
             android:elevation="@dimen/text_size16dp"
